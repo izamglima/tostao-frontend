@@ -1,0 +1,8 @@
+@use '../abstracts/mixins';
+
+input,  
+textarea {  
+    @include mixins.input-placeholder {
+        color: red;
+    }
+}
