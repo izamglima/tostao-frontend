@@ -1,0 +1,38 @@
+.logo {
+    border: 0.5em solid $primary;
+    background-color: $secondary;
+    width: 40vw;
+    height: 40vw;
+    @include border-radius(50%);
+    @include push-auto;
+    
+    span {
+        display: block;
+        color: $primary;
+        font-size: 28vw;
+        margin-top: 20px; 
+    }
+}
+
+.section {
+    @include push-auto;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.section-secondary {
+    background-color: $secondary;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    @include border-radius(15px);
+
+    h3 {
+        color: $white-font-color;
+    }
+}
+
+.home {
+    .logo {
+        margin-bottom: 2em;
+    }
+}

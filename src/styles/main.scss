@@ -1,9 +1,10 @@
-@use 'abstracts/variables';
-@use 'abstracts/placeholders';
-@use 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
-@use 'base/reset';
-@use 'base/typhography';
-@use 'base/forms';
+@import 'base/reset';
+@import 'base/typhography';
+@import 'base/forms';
 
-@use 'themes/dark';
+@import 'themes/dark';
+
+@import 'app/home';
