@@ -9,22 +9,73 @@ import { Chart } from 'chart.js';
 export class AppComponent {
   title = 'tostao-frontend';
 
-  chart_One = []; // This will hold the first chart infos
-
+  chartSpending = [];
+  chartPrice = [];
+  
   constructor(private _charts: ChartsService) {}
-  /*
+  
   ngOnInit() {
-    this._charts.randomDataToChart_One()
-      .subscribe(res => {
-        let temp_max = res['list'].map(res => res.main.temp_max);
-        let temp_min = res['list'].map(res => res.main.temp_min);
-        let alldates = res['list'].map(res => res.dt);
 
-        let weatherDates = []
-        alldates.forEach((res) => {
-            let jsdate = new Date(res * 1000)
-            weatherDates.push(jsdate.toLocaleTimeString('en', { year: 'numeric', month: 'short', day: 'numeric' }))
-        })
-      })
-  }*/
+    this.chartSpending = new Chart('canvas', {
+      type: 'pie',
+      data: {
+        labels:  this._charts.randomDataToChartSpendingsHome().labelSpendings ,
+        datasets: [{
+          backgroundColor: [
+            "#F8CBC5",
+            "#D9AD5B",
+            "#5CA4EB"
+          ],
+          data: this._charts.randomDataToChartSpendingsHome().dataSpendings
+        }] 
+      },
+      options: {
+        responsive: true,
+        legend: {
+          position: 'bottom',
+          padding: 10
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    });
+
+    this.chartPrice = new Chart('canvas2', {
+      type: 'line',
+      data: {
+        labels: this._charts.randomDataToChartSpendingsHome().dataPriceMonths,
+        datasets: [{
+          label: "Apple",
+          backgroundColor: '#45BFB3',
+          borderColor: '#45BFB3',
+          data: [
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor()
+          ],
+          fill: false,
+        }, {
+          label: "Banana",
+          fill: false,
+          backgroundColor: '#fff',
+          borderColor: '#fff',
+          data: [
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor(),
+            this._charts.randomScalingFactor()
+          ],
+        }]
+      }
+    });
+  }
 }
