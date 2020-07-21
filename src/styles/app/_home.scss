@@ -5,6 +5,7 @@
     height: 40vw;
     @include border-radius(50%);
     @include push-auto;
+    margin-bottom: 2em;
     
     span {
         display: block;
@@ -18,12 +19,12 @@
     @include push-auto;
     text-align: center;
     padding: 20px 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
+
 .section-secondary {
     background-color: $secondary;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding: 45px 20px;
     @include border-radius(15px);
 
     h3 {
@@ -31,8 +32,58 @@
     }
 }
 
-.home {
+footer {
+    @include push-auto;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid $primary;
+    width: 50vw;;
+
+    h3 {
+        color: $primary;
+        margin: 0;
+    }
+}
+
+.section-home-texts h3,
+.section-home-texts p {
+    display: none;
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px){
     .logo {
-        margin-bottom: 2em;
+        width: 30vw;
+        height: 30vw;
+
+        span {
+            font-size: 22vw;
+        }
+    }
+
+    .grid {
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .section-home-texts {
+        margin-left: 50px;
+    }
+
+    .section-home-texts h3,
+    .section-home-texts p {
+        display: block;
+    }
+
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+    .section {
+        canvas {
+            max-width: 70%;
+            @include push-auto;    
+        }
     }
 }

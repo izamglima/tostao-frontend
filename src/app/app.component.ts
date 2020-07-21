@@ -9,24 +9,26 @@ import { Chart } from 'chart.js';
 export class AppComponent {
   title = 'tostao-frontend';
 
-  chartSpending = [];
-  chartPrice = [];
+  spendingChart = [];
+  priceChart = [];
+  incomeChart = [];
   
   constructor(private _charts: ChartsService) {}
   
   ngOnInit() {
+    let values = this._charts.randomDataToChartSpendingsHome();
 
-    this.chartSpending = new Chart('canvas', {
+    this.spendingChart = new Chart('canvas', {
       type: 'pie',
       data: {
-        labels:  this._charts.randomDataToChartSpendingsHome().labelSpendings ,
+        labels:  values.labelSpendings ,
         datasets: [{
           backgroundColor: [
             "#F8CBC5",
             "#D9AD5B",
             "#5CA4EB"
           ],
-          data: this._charts.randomDataToChartSpendingsHome().dataSpendings
+          data: values.dataSpendings
         }] 
       },
       options: {
@@ -42,11 +44,28 @@ export class AppComponent {
       }
     });
 
-    this.chartPrice = new Chart('canvas2', {
+    this.priceChart = new Chart('canvas2', {
       type: 'line',
       data: {
-        labels: this._charts.randomDataToChartSpendingsHome().dataPriceMonths,
-        datasets: [{
+        labels: values.dataPriceMonths,
+        datasets: [
+          {
+            label: "Banana",
+            fontColor: "white",
+            fill: false,
+            backgroundColor: '#fff',
+            borderColor: '#fff',
+            data: [
+              this._charts.randomScalingFactor(),
+              this._charts.randomScalingFactor(),
+              this._charts.randomScalingFactor(),
+              this._charts.randomScalingFactor(),
+              this._charts.randomScalingFactor(),
+              this._charts.randomScalingFactor(),
+              this._charts.randomScalingFactor()
+            ],
+          }/*,
+          {
           label: "Apple",
           backgroundColor: '#45BFB3',
           borderColor: '#45BFB3',
@@ -60,21 +79,57 @@ export class AppComponent {
             this._charts.randomScalingFactor()
           ],
           fill: false,
-        }, {
-          label: "Banana",
-          fill: false,
-          backgroundColor: '#fff',
-          borderColor: '#fff',
-          data: [
-            this._charts.randomScalingFactor(),
-            this._charts.randomScalingFactor(),
-            this._charts.randomScalingFactor(),
-            this._charts.randomScalingFactor(),
-            this._charts.randomScalingFactor(),
-            this._charts.randomScalingFactor(),
-            this._charts.randomScalingFactor()
-          ],
+        } */]
+      },
+      options: {
+        legend: {
+            label: {
+              fontColor: "white"
+            }
+        },
+        scales: { 
+          yAxes: [{
+            ticks: {
+                fontColor: "white"
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white"
+            }
+          }]
+        }
+      }
+    });
+
+    this.incomeChart = new Chart('canvas3', {
+      type: 'bar',
+      data: {
+        labels: values.dataIncomeMonths,
+        datasets: [{
+          label: '$',
+          data: values.dataIncomeValues,
+          backgroundColor: '#C4C4C4'
         }]
+      },
+      options: {
+        scales: {
+          offset: false,
+          yAxes: [{
+            gridLines: {
+              drawBorder: false,
+            },
+            ticks: {
+              beginAtZero: true
+            }
+          }],
+          xAxes: {
+            gridLines: {
+              drawBorder: false,
+              offsetGridLines: false
+            }
+          }
+        }
       }
     });
   }
