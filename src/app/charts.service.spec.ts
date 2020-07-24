@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { ChartsService } from './charts.service';
 
 describe('ChartsService', () => {
@@ -13,4 +12,5 @@ describe('ChartsService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
 });

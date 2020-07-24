@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs';
-import SampleJson from '../assets/randomDataToCharts.json';
 import { Chart } from 'chart.js';
 
 @Injectable({
@@ -20,7 +19,23 @@ export class ChartsService {
   }*/
   
   randomData() {
-    return SampleJson;
+    return {
+      "dataSpendings":[
+          35, 35, 35
+      ],
+      "labelSpendings": [
+          "Market", "Transport", "Home"
+      ],
+      "dataPriceMonths": [
+          "3y", "1y", "6m", "3m", "1m", "1w", "24h"
+      ],
+      "dataIncomeMonths": [
+          "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago" 
+      ],
+      "dataIncomeValues": [
+          8, 4, 6, 11, 12, 8, 6.5, 10
+      ]
+   };
   }
 
   randomScalingFactor = function() {
