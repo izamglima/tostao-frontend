@@ -6,7 +6,7 @@ import { ChartsService } from './charts.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'tostao-frontend';
+  title = 'tostao-client';
 
   spendingChart = [];
   priceChart = [];

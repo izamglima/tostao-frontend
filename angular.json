@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tostao-frontend": {
+    "tostao-client": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tostao-frontend",
+            "outputPath": "dist/tostao-client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tostao-frontend:build"
+            "browserTarget": "tostao-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tostao-frontend:build:production"
+              "browserTarget": "tostao-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tostao-frontend:build"
+            "browserTarget": "tostao-client:build"
           }
         },
         "test": {
@@ -88,6 +88,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "codeCoverage": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -115,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tostao-frontend:serve"
+            "devServerTarget": "tostao-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tostao-frontend:serve:production"
+              "devServerTarget": "tostao-client:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "tostao-frontend"
+  "defaultProject": "tostao-client"
 }
