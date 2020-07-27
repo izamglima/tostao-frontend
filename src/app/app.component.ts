@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ChartsService } from './charts.service';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,18 @@ import { ChartsService } from './charts.service';
 export class AppComponent {
   title = 'tostao-client';
 
+
   spendingChart = [];
   priceChart = [];
   incomeChart = [];
   
-  constructor(private _charts: ChartsService) {}
+  constructor(private _charts: ChartsService, private meta: Meta) {
+    this.meta.addTags([
+      { name: 'author', content: 'Izabela Lima' },
+      { name: 'subtitle', content: 'Manage your expenses'},,
+      { name: 'classification', content: 'Finaces'}
+    ], true);
+  }
   
   ngOnInit() {
     this.spendingChart = this._charts.buildSpendingChart('canvas');
