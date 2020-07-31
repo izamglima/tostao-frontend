@@ -1,0 +1,31 @@
+.wrapper {
+    margin: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid $very-light-accent-font-color;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px){
+    .wrapper {
+        max-width: 85vw;
+        @include push-auto;
+    }
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px){
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 10px;
+        box-sizing: border-box;
+    }
+    .wrapper {
+        max-width: 80vw;
+        @include push-auto;
+    }
+}

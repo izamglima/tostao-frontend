@@ -1,0 +1,16 @@
+/* Colors */
+
+$primary: #65A66F;
+$secondary: rgba(191,186,159, .80);
+$app-background: #FEFCFA;
+
+$primary-font-color: #666666;
+$accent-font-color: #898989;
+$light-accent-font-color: #A3A3A3;
+$very-light-accent-font-color: #C4C4C4;
+$light-button: rgba(196, 196, 196, .80);
+$white-font-color: #FFFFFF;
+
+body {
+    background-color: $app-background;
+}

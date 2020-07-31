@@ -1,0 +1,39 @@
+@use '../abstracts/mixins';
+
+input,  
+textarea {  
+    @include mixins.input-placeholder {
+        color: red;
+    }
+}
+.buttons-container {
+    max-width: 80%;
+    @include push-auto;
+}
+
+.button {
+    border: none;
+    padding: 18px 15px;
+    width: 100%;
+    @include border-radius(40px);
+    margin-bottom: 10px;
+    font-size: 1em;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.button-default {
+    color: $white-font-color;
+    background-color: $primary;
+
+    &:hover {
+        background-color: rgba($primary, .9);
+    }
+}
+.button-empty {
+    background-color:  $light-button;
+    color: $white-font-color;
+}
