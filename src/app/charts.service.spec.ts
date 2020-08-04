@@ -31,7 +31,7 @@ describe('ChartsService', () => {
   });
 
   it('randomData should return a object with random data', () => {
-    expect(service.randomData()).toEqual(data);
+    expect(service.getRandomData()).toEqual(data);
   });
 
 });
