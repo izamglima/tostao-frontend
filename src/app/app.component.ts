@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       { name: 'classification', content: 'Finaces'}
     ], true);
   }
-  ngOnInit() {
+  ngOnInit(): any {
     this.spendingChart = this.charts.buildSpendingChart('canvas');
     this.priceChart = this.charts.buildPriceChart('canvas2');
     this.incomeChart = this.charts.buildIncomeChart('canvas3');

@@ -17,7 +17,7 @@ export class ChartsService {
     return this._http.get('http://samples.openweathermap.org/data/2.5/history/city?q=Warren,OH&appid=b6907d289e10d714a6e88b30761fae22')
       .map(result => result);
   }*/
-  getRandomData() {
+  getRandomData(): any {
     return {
       dataSpendings: [
         35, 35, 35
@@ -36,10 +36,10 @@ export class ChartsService {
       ]
    };
   }
-  randomScalingFactor = function() {
+  randomScalingFactor = (): any => {
     return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
-  };
-  buildPriceChart = function(element: string) {
+  }
+  buildPriceChart = function(element: string): any {
     return new Chart(element, {
       type: 'line',
       data: {
@@ -98,7 +98,7 @@ export class ChartsService {
       }
     });
   };
-  buildSpendingChart = function(element: string) {
+  buildSpendingChart = function(element: string): any {
     return new Chart(element, {
       type: 'pie',
       data: {
@@ -125,7 +125,7 @@ export class ChartsService {
       }
     });
   };
-  buildIncomeChart = function(element: string) {
+  buildIncomeChart = function(element: string): any {
     return new Chart(element, {
       type: 'bar',
       data: {
