@@ -1,0 +1,43 @@
+<header class="section-title">
+    <h1>Tostão</h1>
+</header>
+
+<div class="wrapper">
+    <main class="section grid">
+        <div class="logo">
+        <span>$</span>
+        </div>
+
+        <div class="section-home-texts">
+        <h3>Track your expenses, incomes and all consumption history with Tostão</h3>
+        <h3>With graphs and [TBD] OCR* recipes</h3>
+        <p>*Optical character recognition</p>
+        <div class="buttons-container">
+            <a routerLink="login" class="button button-default" name="Login" value="Login">Login</a>
+            <a class="button button-empty" name="Create Account" value="Create Account">Create Account</a>  
+        </div>
+        </div>
+    </main>
+
+    <section class="section">
+        <h3>Income</h3>
+        
+        <canvas id="canvas3">{{ incomeChart }}</canvas>
+    </section>
+
+    <section class="section">
+        <h3>Spending History</h3>
+
+        <canvas id="canvas">{{ spendingChart }}</canvas>
+    </section>
+
+    <section class="section section-secondary">
+        <h3>Price History</h3>
+
+        <canvas id="canvas2">{{ priceChart }}</canvas>
+    </section>
+
+    <footer>
+        <h3>Tostão</h3>
+    </footer>
+</div>
