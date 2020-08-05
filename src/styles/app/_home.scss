@@ -6,6 +6,7 @@
     @include border-radius(50%);
     @include push-auto;
     margin-bottom: 2em;
+    grid-column: 1/9;
     
     span {
         display: block;
@@ -18,13 +19,13 @@
 .section {
     @include push-auto;
     text-align: center;
-    padding: 20px 0;
-    margin-bottom: 40px;
+    padding: 2em 0;
+    margin-bottom: 4em;
 }
 
 .section-secondary {
     background-color: $secondary;
-    padding: 45px 20px;
+    padding: 4.5em 2em;
     @include border-radius(15px);
 
     h3 {
@@ -35,14 +36,18 @@
 footer {
     @include push-auto;
     text-align: center;
-    padding: 15px 0;
+    padding: 1.5em 0;
     border-top: 1px solid $primary;
-    width: 50vw;;
+    width: 50vw;
 
     h3 {
         color: $primary;
         margin: 0;
     }
+}
+
+.section-home-texts {
+    grid-column: 1/9;
 }
 
 .section-home-texts h3,
@@ -53,6 +58,7 @@ footer {
 /* large tablet & laptop styles */
 @media screen and (min-width: 960px){
     .logo {
+        grid-column: 1/4;
         width: 30vw;
         height: 30vw;
 
@@ -61,14 +67,9 @@ footer {
         }
     }
 
-    .grid {
-        align-items: center;
-        box-sizing: border-box;
-        display: flex;
-    }
-
     .section-home-texts {
-        margin-left: 50px;
+        grid-column: 4/9;
+        margin: 5em 0 0 5em;
     }
 
     .section-home-texts h3,

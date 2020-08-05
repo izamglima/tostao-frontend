@@ -38,3 +38,26 @@ textarea {
     background-color:  $light-button;
     color: $white-font-color;
 }
+
+.form {
+    margin-bottom: 2em;
+}
+
+.form-text-field {
+    margin-bottom: 1em;
+
+    label {
+        display: block;
+        color: $light-accent-font-color;
+        margin-bottom: 3px;
+    }
+
+    input {
+        width: 100%;
+        height: 60px;
+        border: 0;
+        background-color: $white-font-color;
+        @include border-radius(3px);
+        @include box-shadow(0, 4px, 4px, rgba(0, 0, 0, 0.25));
+    }
+}
