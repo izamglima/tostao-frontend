@@ -1,5 +1,6 @@
 # Tostao Client
-
+Web application to track your expenses, incomes and all consumption history.
+[TBD] Read recipes with OCR for easly insert the expenses.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server
@@ -21,6 +22,16 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+
+## Release
+
+After merge a new feature/bug you can bump the version and push it to upstream:
+
+```sh
+make release
+git push origin master && git push origin --tags
+```
 
 ## Further help
 

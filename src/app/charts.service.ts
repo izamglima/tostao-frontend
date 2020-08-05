@@ -8,50 +8,46 @@ import { Chart } from 'chart.js';
 })
 export class ChartsService {
 
-  //constructor(private _http: HttpClient) {}
+  // constructor(private _http: HttpClient) {}
   constructor() {
 
   }
   // Exemplo pra quando integrar com o backend
-  /*dailyForecast() {
-    return this._http.get("http://samples.openweathermap.org/data/2.5/history/city?q=Warren,OH&appid=b6907d289e10d714a6e88b30761fae22")
+  /* dailyForecast() {
+    return this._http.get('http://samples.openweathermap.org/data/2.5/history/city?q=Warren,OH&appid=b6907d289e10d714a6e88b30761fae22')
       .map(result => result);
   }*/
-  
-  randomData() {
+  getRandomData(): any {
     return {
-      "dataSpendings":[
-          35, 35, 35
+      dataSpendings: [
+        35, 35, 35
       ],
-      "labelSpendings": [
-          "Market", "Transport", "Home"
+      labelSpendings: [
+        'Market', 'Transport', 'Home'
       ],
-      "dataPriceMonths": [
-          "3y", "1y", "6m", "3m", "1m", "1w", "24h"
+      dataPriceMonths: [
+        '3y', '1y', '6m', '3m', '1m', '1w', '24h'
       ],
-      "dataIncomeMonths": [
-          "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago" 
+      dataIncomeMonths: [
+        'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago'
       ],
-      "dataIncomeValues": [
-          8, 4, 6, 11, 12, 8, 6.5, 10
+      dataIncomeValues: [
+        8, 4, 6, 11, 12, 8, 6.5, 10
       ]
    };
   }
-
-  randomScalingFactor = function() {
+  randomScalingFactor = (): any => {
     return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
   }
-
-
-  buildPriceChart = function(element:string) {
+  buildPriceChart = function(element: string): any {
     return new Chart(element, {
       type: 'line',
       data: {
-        labels: this.randomData().dataPriceMonths,
+        labels: this.getRandomData().dataPriceMonths,
         datasets: [
           {
-            label: "Banana",
-            fontColor: "white",
+            label: 'Banana',
+            fontColor: 'white',
             fill: false,
             backgroundColor: '#fff',
             borderColor: '#fff',
@@ -66,7 +62,7 @@ export class ChartsService {
             ],
           }/*,
           {
-          label: "Apple",
+          label: 'Apple',
           backgroundColor: '#45BFB3',
           borderColor: '#45BFB3',
           data: [
@@ -83,39 +79,38 @@ export class ChartsService {
       },
       options: {
         legend: {
-            label: {
-              fontColor: "white"
-            }
+          label: {
+            fontColor: 'white'
+          }
         },
-        scales: { 
+        scales: {
           yAxes: [{
             ticks: {
-                fontColor: "white"
+                fontColor: 'white'
             }
           }],
           xAxes: [{
             ticks: {
-              fontColor: "white"
+              fontColor: 'white'
             }
           }]
         }
       }
     });
-  }
- 
-  buildSpendingChart = function(element:string) {
+  };
+  buildSpendingChart = function(element: string): any {
     return new Chart(element, {
       type: 'pie',
       data: {
-        labels:  this.randomData().labelSpendings ,
+        labels:  this.getRandomData().labelSpendings ,
         datasets: [{
           backgroundColor: [
-            "#F8CBC5",
-            "#D9AD5B",
-            "#5CA4EB"
+            '#F8CBC5',
+            '#D9AD5B',
+            '#5CA4EB'
           ],
-          data: this.randomData().dataSpendings
-        }] 
+          data: this.getRandomData().dataSpendings
+        }]
       },
       options: {
         responsive: true,
@@ -129,16 +124,15 @@ export class ChartsService {
         }
       }
     });
-  }
-
-  buildIncomeChart = function(element:string) {
+  };
+  buildIncomeChart = function(element: string): any {
     return new Chart(element, {
       type: 'bar',
       data: {
-        labels: this.randomData().dataIncomeMonths,
+        labels: this.getRandomData().dataIncomeMonths,
         datasets: [{
           label: '$',
-          data: this.randomData().dataIncomeValues,
+          data: this.getRandomData().dataIncomeValues,
           backgroundColor: '#C4C4C4'
         }]
       },
@@ -162,5 +156,5 @@ export class ChartsService {
         }
       }
     });
-  }
+  };
 }
