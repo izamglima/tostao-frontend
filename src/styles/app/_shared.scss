@@ -2,10 +2,21 @@
     margin: 0 20px;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
 .section-title {
     text-align: center;
     padding: 15px 0;
     border-bottom: 1px solid $very-light-accent-font-color;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* small tablet styles */
@@ -18,14 +29,8 @@
 
 /* large tablet & laptop styles */
 @media screen and (min-width: 960px){
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        gap: 10px;
-        box-sizing: border-box;
-    }
     .wrapper {
-        max-width: 80vw;
+        max-width: 90vw;
         @include push-auto;
     }
 }

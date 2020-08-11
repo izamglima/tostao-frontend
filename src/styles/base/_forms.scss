@@ -6,23 +6,26 @@ textarea {
         color: red;
     }
 }
+
 .buttons-container {
-    max-width: 80%;
     @include push-auto;
 }
 
-.button {
-    border: none;
-    padding: 18px 15px;
-    width: 100%;
-    @include border-radius(40px);
-    margin-bottom: 10px;
-    font-size: 1em;
+button {
     cursor: pointer;
 
     &:focus {
         outline: none;
     }
+}
+
+.button {
+    display: block;
+    border: none;
+    padding: 18px 15px;
+    @include border-radius(40px);
+    margin-bottom: 10px;
+    font-size: 1em;
 }
 
 .button-default {
@@ -36,4 +39,41 @@ textarea {
 .button-empty {
     background-color:  $light-button;
     color: $white-font-color;
+}
+
+.form {
+    margin-bottom: 4em;
+}
+
+.form-text-field {
+    margin-bottom: 1em;
+
+    label {
+        display: block;
+        color: $light-accent-font-color;
+        margin-bottom: 3px;
+    }
+
+    input {
+        width: 100%;
+        height: 60px;
+        border: 0;
+        background-color: $white-font-color;
+        padding-left: 7px;
+        color: $accent-font-color;
+        font-size: 1em;
+        @include border-radius(3px);
+        @include box-shadow(0, 4px, 4px, rgba(0, 0, 0, 0.25));
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+    .buttons-container {
+        max-width: 80%;
+    }
 }
