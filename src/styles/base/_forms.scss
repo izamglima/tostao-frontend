@@ -6,24 +6,26 @@ textarea {
         color: red;
     }
 }
+
 .buttons-container {
-    max-width: 80%;
     @include push-auto;
+}
+
+button {
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .button {
     display: block;
     border: none;
     padding: 18px 15px;
-    width: 100%;
     @include border-radius(40px);
     margin-bottom: 10px;
     font-size: 1em;
-    cursor: pointer;
-
-    &:focus {
-        outline: none;
-    }
 }
 
 .button-default {
@@ -40,7 +42,7 @@ textarea {
 }
 
 .form {
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
 
 .form-text-field {
@@ -59,11 +61,19 @@ textarea {
         background-color: $white-font-color;
         padding-left: 7px;
         color: $accent-font-color;
+        font-size: 1em;
         @include border-radius(3px);
         @include box-shadow(0, 4px, 4px, rgba(0, 0, 0, 0.25));
 
         &:focus {
             outline: none;
         }
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+    .buttons-container {
+        max-width: 80%;
     }
 }
