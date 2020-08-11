@@ -7,7 +7,6 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
   title = 'tostao-client';
-  
   constructor(private meta: Meta) {
     this.meta.addTags([
       { name: 'author', content: 'Izabela Lima' },

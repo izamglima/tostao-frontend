@@ -24,7 +24,7 @@ describe('HomeComponent', () => {
   });
 
   it('should render title', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.section-title h1').textContent).toContain('Tostão');
