@@ -8,6 +8,8 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  menuContainerToggle:boolean = false;
+
   ngOnInit(): void {
   }
 

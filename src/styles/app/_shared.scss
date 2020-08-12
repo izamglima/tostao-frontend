@@ -9,15 +9,55 @@
     box-sizing: border-box;
 }
 
-.section-title {
-    text-align: center;
+.section {
+    @include push-auto;
+    padding: 2em 0;
+    margin-bottom: 4em;
+}
+
+.smaller-section {
+    padding: 1em 0;
+}
+
+.header-title {
     padding: 15px 0;
     border-bottom: 1px solid $very-light-accent-font-color;
+    
+    a {
+        color: $primary-font-color;
+    }
+}
+
+.title-section {
+    .title-icon-box {
+        border: 1px solid $very-light-accent-font-color;
+        @include border-radius(5px);
+        width: 68px;
+        height: 69px;
+        display: inline-block;
+        vertical-align: bottom;
+
+        i {
+            font-size: 4.5em;
+            color: $primary;
+        }
+    }
+    h3 {
+        display: inline-block;
+        margin-left: 0.9em;
+    }
 }
 
 .text-center {
     text-align: center;
 }
+
+.filter-box {
+    summary {
+        color: $accent-font-color;
+    }
+}
+
 
 /* small tablet styles */
 @media screen and (min-width: 620px){
