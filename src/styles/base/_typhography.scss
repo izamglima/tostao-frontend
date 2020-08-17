@@ -30,6 +30,10 @@ label {
     font-size: 1em;
 }
 
+p {
+    color: $accent-font-color;
+}
+
 a {
     color: $primary;
     text-decoration: none;

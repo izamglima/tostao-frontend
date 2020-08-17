@@ -1,0 +1,83 @@
+.filter-box {
+    overflow: auto;
+}
+
+.filter-form {
+    padding: 1em 0;
+}
+.filter-button-container {
+    padding: 0 10px;
+    display: flex;
+    max-width: 80%;
+    margin: 1em auto;
+
+    .filter-button {
+        width: 60px;
+        height: 60px;
+        color: $white-font-color;
+        margin: 0 auto;
+        @include border-radius(7px);
+
+        &:nth-of-type(1) {
+            background-color: $light-accent-font-color;
+        }
+        &:nth-of-type(2) {
+            background-color: $button-filter-rose;
+        }
+        &:nth-of-type(3) {
+            background-color: $button-filter-lilac;
+        }
+        &:nth-of-type(4) {
+            background-color: $button-filter-light-green;
+        }
+        &:nth-of-type(5) {
+            background-color: $button-filter-light-orange;
+        }
+    }
+
+    &:nth-of-type(2) {
+        padding-top: 1.2em;
+    }
+    p {
+        padding-top: 2px;
+        margin-right: 0.5em;
+        display: none;
+    }
+}
+
+.form-checkbox-field {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin-right: 1em;
+
+    label {
+        padding-top: 0.2em;
+        padding-left: 0.5em;
+    }
+}
+
+.form-filter-button {
+    position: relative;
+    top: -10px;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px){
+    .filter-button-container {
+        float: left;
+
+        .filter-button {
+            margin-right: 1em;
+        }
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+    .filter-button-container { 
+        p {
+            display: block;
+        }
+    }
+}

@@ -55,6 +55,10 @@
 .filter-box {
     summary {
         color: $accent-font-color;
+
+        &:focus {
+            outline: none;
+        }
     }
 }
 
@@ -62,15 +66,14 @@
 /* small tablet styles */
 @media screen and (min-width: 620px){
     .wrapper {
-        max-width: 85vw;
+        max-width: 80vw;
         @include push-auto;
     }
 }
 
-/* large tablet & laptop styles */
-@media screen and (min-width: 960px){
+/* desktop styles */
+@media screen and (min-width: 1200px){ 
     .wrapper {
-        max-width: 90vw;
-        @include push-auto;
+        max-width: 70vw;
     }
 }

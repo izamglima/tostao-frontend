@@ -7,6 +7,16 @@ textarea {
     }
 }
 
+input[type=checkbox] {
+    width: 1.5em;
+    height: 1.5em;
+
+    &:checked {
+        box-shadow: 0px 4px 4px $light-accent-font-color;
+    }
+}
+
+
 .buttons-container {
     @include push-auto;
 }
@@ -41,12 +51,21 @@ button {
     color: $white-font-color;
 }
 
+.button-circle {
+    @include border-radius(50%);
+    padding: 0;
+    height: 3em;
+    width: 3em;
+    padding-top: 5px;
+}
+
 .form {
     margin-bottom: 4em;
 }
 
 .form-text-field {
     margin-bottom: 1em;
+    position: relative;
 
     label {
         display: block;
@@ -68,6 +87,26 @@ button {
         &:focus {
             outline: none;
         }
+    }
+}
+
+.form-with-icon {
+    input {
+        padding-left: 2.2em;
+        padding-top: 0.8em;
+        box-sizing: border-box;
+    }
+    label {
+        position: absolute;
+        bottom: 32px;
+        left: 35px;
+        font-size: 0.8em;
+    }
+    .material-icons {
+        position: absolute;
+        color: $light-accent-font-color;
+        bottom: 16px;
+        left: 6px;
     }
 }
 
