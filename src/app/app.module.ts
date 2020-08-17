@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SignComponent } from './components/sign/sign.component';
 import { SpendingHistoryComponent } from './components/spending-history/spending-history.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PriceHistoryComponent } from './components/price-history/price-history.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeaderComponent } from './components/header/header.component';
     HomeComponent,
     SignComponent,
     SpendingHistoryComponent,
-    HeaderComponent
+    HeaderComponent,
+    PriceHistoryComponent
   ],
   imports: [
     BrowserModule,
