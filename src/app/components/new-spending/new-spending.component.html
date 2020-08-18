@@ -33,10 +33,18 @@
             <input type="text" name="category" id="category">   
         </div>
 
-        <div class="form-filter-button pull-right">
-            <button class="button button-circle" name="filter" id="filter">
-                <i class="material-icons">search</i>
+        <div class="text-center" *ngIf="!noteToggle">
+            <button name="insert note" (click)="noteToggle = true">
+                Insert note
+                <i class="material-icons">note_add</i>
             </button>
+        </div>
+        <div *ngIf="noteToggle">
+            <button name="cancel note" (click)="noteToggle = false">
+                Cancel
+                <i class="material-icons">close</i>
+            </button>
+            <textarea name="note" id="note" cols="30" rows="10" placeholder="Insert note"></textarea>
         </div>
         
     </form>
@@ -64,8 +72,15 @@
             </div>
            
             <div class="form-checkbox-field">
-                <input type="checkbox" name="Insert another category" id="another-category">
+                <input type="checkbox" (click)="noteToggle = !noteToggle" name="Insert another category" id="another-category">
                 <label for="another-category">Insert another category</label>   
+            </div>
+            <div *ngIf="noteToggle">
+                <div class="form-text-field form-with-icon">
+                    <i class="material-icons">label</i>
+                    <label for="category">Category</label>
+                    <input type="text" name="category" id="category">   
+                </div>
             </div>
             <br>
             <hr>

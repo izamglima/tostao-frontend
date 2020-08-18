@@ -8,6 +8,9 @@ export class NewSpendingComponent implements OnInit {
 
   constructor() { }
 
+  noteToggle:boolean = false;
+  categoryToggle:boolean = false;
+
   ngOnInit(): void {
   }
 
