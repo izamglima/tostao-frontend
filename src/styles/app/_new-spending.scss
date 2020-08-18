@@ -1,0 +1,21 @@
+.total-box {
+    display: flex;
+    justify-content: center;
+    background-color: $secondary;
+    padding: 1em;
+    @include border-radius(15px);
+    color: $white-font-color;
+    font-size: 1.3em;
+    
+    p {
+        color: $white-font-color;
+        padding-right: 1em;
+        margin-bottom: 0;
+    }
+}
+
+.buttons-container-add-spending {
+    button {
+        width: 100%;
+    }
+}

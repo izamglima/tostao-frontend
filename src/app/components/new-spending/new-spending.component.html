@@ -1,0 +1,96 @@
+<app-header></app-header>
+
+<div class="wrapper">
+    <section class="smaller-section title-section">
+        <div class="title-icon-box">
+            <i class="material-icons">money_off</i>
+        </div>
+        <h3>Create new spending</h3>
+    </section>
+
+    <form action="">
+        <div class="form-text-field form-with-icon">
+            <i class="material-icons">store</i>
+            <label for="store">Store</label>
+            <input type="text" name="store" id="store">   
+        </div>
+
+        <div class="form-text-field form-with-icon">
+            <i class="material-icons">account_balance</i>
+            <label for="currency">Currency</label>
+            <input type="text" name="currency" id="currency">               
+        </div>
+
+        <div class="form-text-field form-with-icon">
+            <i class="material-icons">today</i>
+            <label for="date">Date</label>
+            <input type="text" name="date" id="date">
+        </div>
+
+        <div class="form-text-field form-with-icon">
+            <i class="material-icons">label</i>
+            <label for="category">Category</label>
+            <input type="text" name="category" id="category">   
+        </div>
+
+        <div class="form-filter-button pull-right">
+            <button class="button button-circle" name="filter" id="filter">
+                <i class="material-icons">search</i>
+            </button>
+        </div>
+        
+    </form>
+
+    <div class="section add-spending-item">
+        <p>Items:</p>
+
+        <article class="box-spendings">
+            <div class="form-text-field form-with-icon">
+                <i class="material-icons">shopping_basket</i>
+                <label for="product">Product</label>
+                <input type="text" name="product" id="product">   
+            </div>
+
+            <div class="form-text-field form-with-icon">
+                <i class="material-icons">swap_vert</i>
+                <label for="quantity">Quantity</label>
+                <input type="text" name="quantity" id="quantity">   
+            </div>
+
+            <div class="form-text-field form-with-icon">
+                <i class="material-icons">attach_money</i>
+                <label for="price">Price</label>
+                <input type="text" name="price" id="price">   
+            </div>
+           
+            <div class="form-checkbox-field">
+                <input type="checkbox" name="Insert another category" id="another-category">
+                <label for="another-category">Insert another category</label>   
+            </div>
+            <br>
+            <hr>
+            <div class="actions-container text-center">
+                <button name="delete item">
+                    <i class="material-icons">delete_outline</i>    
+                </button>
+            </div>
+        </article>
+
+        <button name="New item" class="pull-right add-spending-item-button">
+            New item
+            <i class="material-icons">add_circle</i>
+        </button>
+    </div>
+
+    <div class="total-box">
+        <p>Total: </p>
+        <span>R$ 234,87</span>
+    </div>
+
+    <section class="section">
+        <div class="text-center buttons-container-add-spending">
+            <button class="button button-default" name="save" value="save">Save</button>
+            <button class="button button-secondary" name="cancel" value="Cancel">Cancel</button>
+        </div>
+    </section>
+</div>

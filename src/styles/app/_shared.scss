@@ -110,7 +110,7 @@
     }
 }
 
-.top-action-button {
+.top-header-link {
     position: relative;
     top: 1.2em;
 
@@ -118,6 +118,43 @@
         font-size: 2.5em;
         color: $primary;
     }    
+}
+
+
+.form-checkbox-field {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin-right: 1em;
+
+    label {
+        padding-top: 0.2em;
+        padding-left: 0.5em;
+    }
+}
+
+.add-spending-item {
+    .form-checkbox-field {
+        justify-content: flex-start;
+        color: $primary-font-color;
+    }
+
+    .add-spending-item-button {
+        font-size: 1.1em;
+        color: $primary-font-color;
+
+        .material-icons {
+            position: relative;
+            top: 10px;
+            font-size: 2em;
+            color: $primary;
+        }
+    }
+}
+
+.form-filter-button {
+    position: relative;
+    top: -17px;
 }
 
 /* small tablet styles */

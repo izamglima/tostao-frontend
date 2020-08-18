@@ -45,23 +45,6 @@
     }
 }
 
-.form-checkbox-field {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    margin-right: 1em;
-
-    label {
-        padding-top: 0.2em;
-        padding-left: 0.5em;
-    }
-}
-
-.form-filter-button {
-    position: relative;
-    top: -17px;
-}
-
 /* small tablet styles */
 @media screen and (min-width: 620px){
     .filter-button-container {
