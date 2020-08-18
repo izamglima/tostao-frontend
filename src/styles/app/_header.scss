@@ -6,7 +6,7 @@
         height: 40px;
         align-self: center;
         margin-left: 15px;
-        position: fixed;
+        position: absolute;
         top: 18px;
         background-color: transparent;
         border: none;
@@ -47,14 +47,14 @@
             background-color: transparent;
             color: $white-font-color;
 
-            i {
+            .material-icons {
                 font-size: 2em;
                 position: relative;
                 top: 7px;
             }
         }
 
-        i {
+        .material-icons {
             font-size: 3em;
             color: $white-font-color;
         }
@@ -79,7 +79,7 @@
             @include border-radius(15px);
         }
 
-        i {
+        .material-icons {
             padding-top: 20px;
             font-size: 3em;
         }
@@ -97,7 +97,7 @@
         right: 1em;
         top: 1em;
         
-        i {
+        .material-icons {
             font-size: 2.5em;
         }
     }
