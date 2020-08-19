@@ -93,10 +93,10 @@
             white-space: nowrap;
         }
     }
+}
 
-    hr {
-        border: 0.9px dashed $primary-font-color;
-    }
+hr {
+    border: 0.9px dashed $primary-font-color;
 }
 
 .actions-container {
@@ -150,10 +150,6 @@
             color: $primary;
         }
     }
-}
-
-.hr-dotted {
-    border: 1px dotted $primary-font-color;
 }
 
 .form-filter-button {

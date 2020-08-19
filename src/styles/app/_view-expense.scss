@@ -1,0 +1,106 @@
+.header-view-expense {
+    display: flex;
+    padding: 0 1em;
+
+    .header-view-expense-icons {
+        flex-grow: 1;
+        align-self: center;
+        text-align: left;
+
+        i {
+            display: block;
+            margin-top: 4px;
+        }
+    }
+    .header-view-expense-title {
+        flex-grow: 2;
+
+        p {
+            margin-bottom: 0;
+            margin-top: 0.5em;
+        }
+    }
+    .header-view-expense-values {
+        flex-grow: 5;
+        text-align: right;
+        
+        span {
+            color: $accent-font-color;
+            margin-top: 0.5em;
+            display: block;
+        }
+    }
+}
+
+.view-expense-products-title {
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+    margin-bottom: 1em;
+
+    div * {
+        display: inline-block;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    i {
+        padding-right: 20px;
+        vertical-align: bottom;
+    }
+}
+
+.view-expense-products-description {
+    color: $accent-font-color;
+    text-transform: uppercase;
+    padding: 0 1em;
+    
+    p {
+        margin-bottom: 0;
+
+        &:nth-of-type(1) {
+            max-width: 80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        &:nth-of-type(2) {
+            position: relative;
+            text-align: right;
+            top: -35px;
+        }
+    }
+
+    span {
+        margin-right: 1em;
+
+        &:nth-of-type(1) {
+            margin-left: 2em;
+        }
+    }
+}
+
+.view-expense-total {
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+
+    p {
+        color: $primary-font-color;
+        font-size: 1.5em;
+    }
+}
+
+.hr-dotted {
+    border: none;
+    margin: 7px 0 0 0;
+    
+    &::before {
+        content: "**********************************************************************";
+        display: block;
+        text-align: center;
+    }
+}
