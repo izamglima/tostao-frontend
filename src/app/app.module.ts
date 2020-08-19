@@ -15,6 +15,9 @@ import { PriceHistoryComponent } from './components/price-history/price-history.
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { NewExpenseComponent } from './components/new-expense/new-expense.component';
 import { ViewExpenseComponent } from './components/view-expense/view-expense.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ProductsComponent } from './components/products/products.component';
+import { MarketplacesComponent } from './components/marketplaces/marketplaces.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { ViewExpenseComponent } from './components/view-expense/view-expense.com
     PriceHistoryComponent,
     ExpensesComponent,
     NewExpenseComponent,
-    ViewExpenseComponent
+    ViewExpenseComponent,
+    CategoriesComponent,
+    ProductsComponent,
+    MarketplacesComponent
   ],
   imports: [
     BrowserModule,

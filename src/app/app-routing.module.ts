@@ -8,6 +8,9 @@ import { PriceHistoryComponent } from './components/price-history/price-history.
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { NewExpenseComponent } from './components/new-expense/new-expense.component';
 import { ViewExpenseComponent } from './components/view-expense/view-expense.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ProductsComponent } from './components/products/products.component';
+import { MarketplacesComponent } from './components/marketplaces/marketplaces.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +20,10 @@ const routes: Routes = [
   { path: 'price-history', component: PriceHistoryComponent },
   { path: 'expenses', component: ExpensesComponent},
   { path: 'expenses/new', component: NewExpenseComponent },
-  { path: 'expenses/view', component: ViewExpenseComponent }
+  { path: 'expenses/view', component: ViewExpenseComponent },
+  { path: 'categories', component: CategoriesComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'marketplaces', component: MarketplacesComponent }
 ];
 
 @NgModule({
