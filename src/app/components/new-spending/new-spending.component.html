@@ -72,10 +72,10 @@
             </div>
            
             <div class="form-checkbox-field">
-                <input type="checkbox" (click)="noteToggle = !noteToggle" name="Insert another category" id="another-category">
+                <input type="checkbox" (click)="categoryToggle = !categoryToggle" name="Insert another category" id="another-category">
                 <label for="another-category">Insert another category</label>   
             </div>
-            <div *ngIf="noteToggle">
+            <div *ngIf="categoryToggle">
                 <div class="form-text-field form-with-icon">
                     <i class="material-icons">label</i>
                     <label for="category">Category</label>
