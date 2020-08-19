@@ -19,3 +19,32 @@
         width: 100%;
     }
 }
+
+.insert-note-container {
+    button {
+        color: $primary-font-color;
+        font-size: 1em;
+
+        .material-icons {
+            vertical-align: text-bottom;    
+        }
+    }
+}
+
+.close-note-container {
+    button {
+        color: $primary-font-color;
+        display: block;
+        margin: 0 auto;
+        font-size: 1em;
+        padding-bottom: 1em;
+
+        .material-icons {
+            vertical-align: text-bottom;
+        }
+    }
+}
+
+.category-input-container {
+    padding-top: 1em;
+}

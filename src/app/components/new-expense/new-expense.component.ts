@@ -10,6 +10,11 @@ export class NewExpenseComponent implements OnInit {
 
   noteToggle:boolean = false;
   categoryToggle:boolean = false;
+  marked:boolean = false;
+
+  toggleVisibility(e){
+    this.marked= e.target.checked;
+  }
 
   ngOnInit(): void {
   }

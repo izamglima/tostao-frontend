@@ -33,18 +33,18 @@
             <input type="text" name="category" id="category">   
         </div>
 
-        <div class="text-center" *ngIf="!noteToggle">
+        <div class="text-center insert-note-container" *ngIf="!noteToggle">
             <button name="insert note" (click)="noteToggle = true">
-                Insert note
                 <i class="material-icons">note_add</i>
+                Insert note...
             </button>
         </div>
-        <div *ngIf="noteToggle">
+        <div class="close-note-container" *ngIf="noteToggle">
             <button name="cancel note" (click)="noteToggle = false">
-                Cancel
                 <i class="material-icons">close</i>
+                Cancel
             </button>
-            <textarea name="note" id="note" cols="30" rows="10" placeholder="Insert note"></textarea>
+            <textarea name="note" id="note" cols="30" rows="5" placeholder="Insert note"></textarea>
         </div>
         
     </form>
@@ -72,10 +72,11 @@
             </div>
            
             <div class="form-checkbox-field">
-                <input type="checkbox" (click)="categoryToggle = !categoryToggle" name="Insert another category" id="another-category">
+                <input type="checkbox" (ngModel)="categoryToggle" 
+                (click)="toggleVisibility($event)" name="Insert another category" id="another-category">
                 <label for="another-category">Insert another category</label>   
             </div>
-            <div *ngIf="categoryToggle">
+            <div class="category-input-container" *ngIf="marked">
                 <div class="form-text-field form-with-icon">
                     <i class="material-icons">label</i>
                     <label for="category">Category</label>
