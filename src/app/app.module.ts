@@ -9,12 +9,12 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { SignComponent } from './components/sign/sign.component';
-import { SpendingHistoryComponent } from './components/spending-history/spending-history.component';
+import { ExpenseHistoryComponent } from './components/expense-history/expense-history.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PriceHistoryComponent } from './components/price-history/price-history.component';
-import { SpendingsComponent } from './components/spendings/spendings.component';
-import { NewSpendingComponent } from './components/new-spending/new-spending.component';
-import { ViewSpendingComponent } from './components/view-spending/view-spending.component';
+import { ExpensesComponent } from './components/expenses/expenses.component';
+import { NewExpenseComponent } from './components/new-expense/new-expense.component';
+import { ViewExpenseComponent } from './components/view-expense/view-expense.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +22,12 @@ import { ViewSpendingComponent } from './components/view-spending/view-spending.
     LoginComponent,
     HomeComponent,
     SignComponent,
-    SpendingHistoryComponent,
+    ExpenseHistoryComponent,
     HeaderComponent,
     PriceHistoryComponent,
-    SpendingsComponent,
-    NewSpendingComponent,
-    ViewSpendingComponent
+    ExpensesComponent,
+    NewExpenseComponent,
+    ViewExpenseComponent
   ],
   imports: [
     BrowserModule,
