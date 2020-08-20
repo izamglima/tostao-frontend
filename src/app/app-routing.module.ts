@@ -6,8 +6,8 @@ import { SignComponent } from './components/sign/sign.component';
 import { PurchaseHistoryComponent } from './components/purchases/purchase-history/purchase-history.component';
 import { PriceHistoryComponent } from './components/price-history/price-history.component';
 import { PurchasesListComponent } from './components/purchases/purchases-list/purchases-list.component';
-import { NewPurchaseComponent } from './components/purchases/new-purchase/new-purchase.component';
-import { ViewPurchaseComponent } from './components/purchases/view-purchase/view-purchase.component';
+import { PurchaseNewComponent } from './components/purchases/purchase-new/purchase-new.component';
+import { PurchaseViewComponent } from './components/purchases/purchase-view/purchase-view.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ProductsComponent } from './components/products/products.component';
 import { MarketplacesComponent } from './components/marketplaces/marketplaces.component';
@@ -19,8 +19,8 @@ const routes: Routes = [
   { path: 'purchase-history', component: PurchaseHistoryComponent },
   { path: 'price-history', component: PriceHistoryComponent },
   { path: 'purchases', component: PurchasesListComponent},
-  { path: 'purchases/new', component: NewPurchaseComponent },
-  { path: 'purchases/:id', component: ViewPurchaseComponent },
+  { path: 'purchases/new', component: PurchaseNewComponent },
+  { path: 'purchases/:id', component: PurchaseViewComponent },
   { path: 'categories', component: CategoriesComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'marketplaces', component: MarketplacesComponent }
