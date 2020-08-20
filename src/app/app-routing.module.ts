@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { SignComponent } from './components/sign/sign.component';
-import { ExpenseHistoryComponent } from './components/expense-history/expense-history.component';
+import { PurchaseHistoryComponent } from './components/purchase-history/purchase-history.component';
 import { PriceHistoryComponent } from './components/price-history/price-history.component';
-import { ExpensesComponent } from './components/expenses/expenses.component';
-import { NewExpenseComponent } from './components/new-expense/new-expense.component';
-import { ViewExpenseComponent } from './components/view-expense/view-expense.component';
+import { PurchasesListComponent } from './components/purchases-list/purchases-list.component';
+import { NewPurchaseComponent } from './components/new-purchase/new-purchase.component';
+import { ViewPurchaseComponent } from './components/view-purchase/view-purchase.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ProductsComponent } from './components/products/products.component';
 import { MarketplacesComponent } from './components/marketplaces/marketplaces.component';
@@ -16,11 +16,11 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignComponent },
-  { path: 'expense-history', component: ExpenseHistoryComponent },
+  { path: 'purchase-history', component: PurchaseHistoryComponent },
   { path: 'price-history', component: PriceHistoryComponent },
-  { path: 'expenses', component: ExpensesComponent},
-  { path: 'expenses/new', component: NewExpenseComponent },
-  { path: 'expenses/view', component: ViewExpenseComponent },
+  { path: 'purchases', component: PurchasesListComponent},
+  { path: 'purchases/new', component: NewPurchaseComponent },
+  { path: 'purchases/:id', component: ViewPurchaseComponent },
   { path: 'categories', component: CategoriesComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'marketplaces', component: MarketplacesComponent }

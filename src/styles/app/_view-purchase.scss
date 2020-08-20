@@ -1,8 +1,8 @@
-.header-view-expense {
+.header-view-purchase {
     display: flex;
     padding: 0 1em;
 
-    .header-view-expense-icons {
+    .header-view-purchase-icons {
         flex-grow: 1;
         align-self: center;
         text-align: left;
@@ -12,7 +12,7 @@
             margin-top: 4px;
         }
     }
-    .header-view-expense-title {
+    .header-view-purchase-title {
         flex-grow: 2;
 
         p {
@@ -20,7 +20,7 @@
             margin-top: 0.5em;
         }
     }
-    .header-view-expense-values {
+    .header-view-purchase-values {
         flex-grow: 5;
         text-align: right;
         
@@ -32,7 +32,7 @@
     }
 }
 
-.view-expense-products-title {
+.view-purchase-products-title {
     display: flex;
     padding: 0 1em;
     justify-content: space-between;
@@ -52,7 +52,7 @@
     }
 }
 
-.view-expense-products-description {
+.view-purchase-products-description {
     color: $accent-font-color;
     text-transform: uppercase;
     padding: 0 1em;
@@ -83,7 +83,7 @@
     }
 }
 
-.view-expense-total {
+.view-purchase-total {
     display: flex;
     padding: 0 1em;
     justify-content: space-between;

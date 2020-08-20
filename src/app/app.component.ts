@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   constructor(private meta: Meta) {
     this.meta.addTags([
       { name: 'author', content: 'Izabela Lima' },
-      { name: 'subtitle', content: 'Manage your expenses'},
+      { name: 'subtitle', content: 'Manage your purchases'},
       { name: 'classification', content: 'Finaces'}
     ], true);
   }

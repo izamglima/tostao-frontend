@@ -19,10 +19,10 @@ export class ChartsService {
   }*/
   getRandomData(): any {
     return {
-      dataExpenses: [
+      dataPurchases: [
         35, 35, 35
       ],
-      labelExpenses: [
+      labelPurchases: [
         'Market', 'Transport', 'Home'
       ],
       dataPriceMonths: [
@@ -98,18 +98,18 @@ export class ChartsService {
       }
     });
   };
-  buildExpenseChart = function(element: string): any {
+  buildPurchaseChart = function(element: string): any {
     return new Chart(element, {
       type: 'pie',
       data: {
-        labels:  this.getRandomData().labelExpenses ,
+        labels:  this.getRandomData().labelPurchases ,
         datasets: [{
           backgroundColor: [
             '#F8CBC5',
             '#D9AD5B',
             '#5CA4EB'
           ],
-          data: this.getRandomData().dataExpenses
+          data: this.getRandomData().dataPurchases
         }]
       },
       options: {

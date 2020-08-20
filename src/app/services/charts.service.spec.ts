@@ -4,10 +4,10 @@ import { ChartsService } from './charts.service';
 describe('ChartsService', () => {
   let service: ChartsService;
   const data = {
-    dataExpenses: [
+    dataPurchases: [
       35, 35, 35
     ],
-    labelExpenses: [
+    labelPurchases: [
       'Market', 'Transport', 'Home'
     ],
     dataPriceMonths: [

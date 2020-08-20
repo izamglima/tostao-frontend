@@ -6,14 +6,14 @@ import { ChartsService } from '../../services/charts.service';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-  expenseChart = [];
+  purchaseChart = [];
   priceChart = [];
   incomeChart = [];
 
   constructor(private charts: ChartsService) { }
 
   ngOnInit(): void {
-    this.expenseChart = this.charts.buildExpenseChart('canvas');
+    this.purchaseChart = this.charts.buildPurchaseChart('canvas');
     this.priceChart = this.charts.buildPriceChart('canvas2');
     this.incomeChart = this.charts.buildIncomeChart('canvas3');
   }
