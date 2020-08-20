@@ -10,7 +10,7 @@ import { PurchaseNewComponent } from './components/purchases/purchase-new/purcha
 import { PurchaseViewComponent } from './components/purchases/purchase-view/purchase-view.component';
 import { CategoriesListComponent } from './components/categories/categories-list/categories-list.component';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
-import { MarketplacesComponent } from './components/marketplaces/marketplaces.component';
+import { MarketplacesListComponent } from './components/marketplaces/marketplaces-list/marketplaces-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'purchases/:id', component: PurchaseViewComponent },
   { path: 'categories', component: CategoriesListComponent },
   { path: 'products', component: ProductsListComponent },
-  { path: 'marketplaces', component: MarketplacesComponent }
+  { path: 'marketplaces', component: MarketplacesListComponent }
 ];
 
 @NgModule({
