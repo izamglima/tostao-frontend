@@ -21,6 +21,8 @@ import { CategoriesListComponent } from './components/categories/categories-list
 import { CategoryNewComponent } from './components/categories/category-new/category-new.component';
 import { CategoryViewComponent } from './components/categories/category-view/category-view.component';
 import { MarketplacesListComponent } from './components/marketplaces/marketplaces-list/marketplaces-list.component';
+import { MarketplaceNewComponent } from './components/marketplaces/marketplace-new/marketplace-new.component';
+import { MarketplaceViewComponent } from './components/marketplaces/marketplace-view/marketplace-view.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { MarketplacesListComponent } from './components/marketplaces/marketplace
     ProductViewComponent,
     ProductNewComponent,
     CategoryNewComponent,
-    CategoryViewComponent
+    CategoryViewComponent,
+    MarketplaceNewComponent,
+    MarketplaceViewComponent
   ],
   imports: [
     BrowserModule,
