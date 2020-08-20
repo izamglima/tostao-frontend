@@ -15,9 +15,13 @@ import { PriceHistoryComponent } from './components/price-history/price-history.
 import { PurchasesListComponent } from './components/purchases/purchases-list/purchases-list.component';
 import { PurchaseNewComponent } from './components/purchases/purchase-new/purchase-new.component';
 import { PurchaseViewComponent } from './components/purchases/purchase-view/purchase-view.component';
-import { CategoriesComponent } from './components/categories/categories.component';
-import { ProductsComponent } from './components/products/products.component';
+import { CategoriesListComponent } from './components/categories/categories-list/categories-list.component';
+import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import { MarketplacesComponent } from './components/marketplaces/marketplaces.component';
+import { ProductViewComponent } from './components/products/product-view/product-view.component';
+import { ProductNewComponent } from './components/products/product-new/product-new.component';
+import { CategoryNewComponent } from './components/categories/category-new/category-new.component';
+import { CategoryViewComponent } from './components/categories/category-view/category-view.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +35,13 @@ import { MarketplacesComponent } from './components/marketplaces/marketplaces.co
     PurchasesListComponent,
     PurchaseNewComponent,
     PurchaseViewComponent,
-    CategoriesComponent,
-    ProductsComponent,
-    MarketplacesComponent
+    CategoriesListComponent,
+    ProductsListComponent,
+    MarketplacesComponent,
+    ProductViewComponent,
+    ProductNewComponent,
+    CategoryNewComponent,
+    CategoryViewComponent
   ],
   imports: [
     BrowserModule,

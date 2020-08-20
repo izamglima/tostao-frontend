@@ -8,8 +8,8 @@ import { PriceHistoryComponent } from './components/price-history/price-history.
 import { PurchasesListComponent } from './components/purchases/purchases-list/purchases-list.component';
 import { PurchaseNewComponent } from './components/purchases/purchase-new/purchase-new.component';
 import { PurchaseViewComponent } from './components/purchases/purchase-view/purchase-view.component';
-import { CategoriesComponent } from './components/categories/categories.component';
-import { ProductsComponent } from './components/products/products.component';
+import { CategoriesListComponent } from './components/categories/categories-list/categories-list.component';
+import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import { MarketplacesComponent } from './components/marketplaces/marketplaces.component';
 
 const routes: Routes = [
@@ -21,8 +21,8 @@ const routes: Routes = [
   { path: 'purchases', component: PurchasesListComponent},
   { path: 'purchases/new', component: PurchaseNewComponent },
   { path: 'purchases/:id', component: PurchaseViewComponent },
-  { path: 'categories', component: CategoriesComponent },
-  { path: 'products', component: ProductsComponent },
+  { path: 'categories', component: CategoriesListComponent },
+  { path: 'products', component: ProductsListComponent },
   { path: 'marketplaces', component: MarketplacesComponent }
 ];
 
