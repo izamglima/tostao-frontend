@@ -9,6 +9,8 @@ import { PurchasesListComponent } from './components/purchases/purchases-list/pu
 import { PurchaseNewComponent } from './components/purchases/purchase-new/purchase-new.component';
 import { PurchaseViewComponent } from './components/purchases/purchase-view/purchase-view.component';
 import { CategoriesListComponent } from './components/categories/categories-list/categories-list.component';
+import { CategoryNewComponent } from './components/categories/category-new/category-new.component';
+import { CategoryViewComponent } from './components/categories/category-view/category-view.component';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import { MarketplacesListComponent } from './components/marketplaces/marketplaces-list/marketplaces-list.component';
 
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'purchases/new', component: PurchaseNewComponent },
   { path: 'purchases/:id', component: PurchaseViewComponent },
   { path: 'categories', component: CategoriesListComponent },
+  { path: 'categories/new', component: CategoryNewComponent },
+  { path: 'categories/view', component: CategoryViewComponent },
   { path: 'products', component: ProductsListComponent },
   { path: 'marketplaces', component: MarketplacesListComponent }
 ];
