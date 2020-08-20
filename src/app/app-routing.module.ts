@@ -11,8 +11,12 @@ import { PurchaseViewComponent } from './components/purchases/purchase-view/purc
 import { CategoriesListComponent } from './components/categories/categories-list/categories-list.component';
 import { CategoryNewComponent } from './components/categories/category-new/category-new.component';
 import { CategoryViewComponent } from './components/categories/category-view/category-view.component';
-import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import { MarketplacesListComponent } from './components/marketplaces/marketplaces-list/marketplaces-list.component';
+import { MarketplaceViewComponent } from './components/marketplaces/marketplace-view/marketplace-view.component';
+import { MarketplaceNewComponent } from './components/marketplaces/marketplace-new/marketplace-new.component';
+import { ProductsListComponent } from './components/products/products-list/products-list.component';
+import { ProductViewComponent } from './components/products/product-view/product-view.component';
+import { ProductNewComponent } from './components/products/product-new/product-new.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,8 +30,12 @@ const routes: Routes = [
   { path: 'categories', component: CategoriesListComponent },
   { path: 'categories/new', component: CategoryNewComponent },
   { path: 'categories/view', component: CategoryViewComponent },
+  { path: 'marketplaces', component: MarketplacesListComponent },
+  { path: 'marketplaces/view', component: MarketplaceViewComponent },
+  { path: 'marketplaces/new', component: MarketplaceNewComponent },
   { path: 'products', component: ProductsListComponent },
-  { path: 'marketplaces', component: MarketplacesListComponent }
+  { path: 'products/view', component: ProductViewComponent },
+  { path: 'products/new', component: ProductNewComponent }
 ];
 
 @NgModule({
