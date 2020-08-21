@@ -48,3 +48,13 @@
 .category-input-container {
     padding-top: 1em;
 }
+
+.add-purchase-item {
+    .box-shared {
+        &:nth-of-type(1) {
+            #deleteExpense {
+                display: none;
+            }  
+        }
+    }
+}

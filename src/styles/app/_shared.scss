@@ -19,6 +19,10 @@
     padding: 1em 0;
 }
 
+.clear {
+    clear: both;
+}
+
 .header-title {
     padding: 15px 0;
     border-bottom: 1px solid $very-light-accent-font-color;
@@ -68,7 +72,7 @@
     float: right;
 }
 
-.box-purchases {
+.box-shared {
     margin: 2em 0;
     padding: 1.3em;
     background: rgba(218, 218, 218, 0.65);
@@ -76,7 +80,7 @@
     @include border-radius(0.9em);
     box-sizing: border-box;
 
-    .box-purchases-texts {
+    .box-shared-texts {
         display: flex;
         justify-content: space-between;
 
@@ -100,6 +104,8 @@ hr {
 }
 
 .actions-container {
+    margin-top: 1em;
+
     .actions-container-action { 
         margin: 1em 1em 0 0;
 
@@ -157,6 +163,20 @@ hr {
     top: -17px;
 }
 
+.pagination-container {
+    margin: 1em 0;
+
+    button {
+        font-size: 1.3em;
+        color: $accent-font-color;
+        margin-right: 0.5em;
+    }
+    span {
+        color: $accent-font-color;
+        margin-right: 0.5em;
+    }
+}
+
 /* small tablet styles */
 @media screen and (min-width: 620px){
     .wrapper {
@@ -165,9 +185,60 @@ hr {
     }
 }
 
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px){ 
+    .box-shared-responsive {
+        width: 48%;
+        margin-right: 10px;
+        display: inline-block;
+
+    }
+}
+
 /* desktop styles */
 @media screen and (min-width: 1200px){ 
     .wrapper {
         max-width: 70vw;
+    }
+
+    .box-shared-responsive {
+        width: 32%;
+    }
+
+    .wrapper-desktop {
+        max-width: 60vw;
+    }
+
+    .side-by-side-text-form {
+        width: 48%;
+        display: inline-block;
+    }
+
+    .side-by-side-text-form.margin-right {
+        margin-right: 10px;
+    }
+    
+    .max-size-text-form {
+        max-width: 97%;
+    }
+
+    .create-form {
+        .box-shared {
+            padding: 1.3em 1.3em 1.3em 2.3em;
+        }
+    }
+
+    .buttons-container-add-purchase {
+        display: flex;
+        justify-content: flex-end;
+        
+        a, button.button-default {
+            width: 20%;
+            box-sizing: border-box;
+        }
+
+        a {
+            margin-right: 1.5em;
+        }
     }
 }
