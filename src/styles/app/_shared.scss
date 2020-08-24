@@ -193,6 +193,11 @@ hr {
         display: inline-block;
 
     }
+
+    .box-shared-mini {
+        max-width: 30%;
+        margin: 0 auto;
+    }
 }
 
 /* desktop styles */
@@ -228,7 +233,7 @@ hr {
         }
     }
 
-    .buttons-container-add-purchase {
+    .buttons-container-add-action {
         display: flex;
         justify-content: flex-end;
         
