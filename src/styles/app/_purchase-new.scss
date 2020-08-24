@@ -52,7 +52,7 @@
 .add-purchase-item {
     .box-shared {
         &:nth-of-type(1) {
-            #deleteExpense {
+            .actions-container {
                 display: none;
             }  
         }

@@ -177,6 +177,10 @@ hr {
     }
 }
 
+.container-box-shared {
+    clear: both;
+}
+
 /* small tablet styles */
 @media screen and (min-width: 620px){
     .wrapper {
