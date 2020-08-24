@@ -8,14 +8,12 @@ export class PurchaseNewComponent implements OnInit {
 
   constructor() { }
 
-  noteToggle:boolean = false;
-  categoryToggle:boolean = false;
-  marked:boolean = false;
-
-  toggleVisibility(e){
-    this.marked= e.target.checked;
+  noteToggle = false;
+  categoryToggle = false;
+  marked = false;
+  toggleVisibility(e): void {
+    this.marked = e.target.checked;
   }
-
   ngOnInit(): void {
   }
 
