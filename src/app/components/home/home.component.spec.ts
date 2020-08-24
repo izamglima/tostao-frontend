@@ -27,6 +27,6 @@ describe('HomeComponent', () => {
     fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.section-title h1').textContent).toContain('Tostão');
+    expect(compiled.querySelector('.header-title h1').textContent).toContain('Tostão');
   });
 });
