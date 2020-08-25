@@ -1,6 +1,6 @@
 # Tostao Client
-Web application to track your expenses, incomes and all consumption history.
-[TBD] Read recipes with OCR for easly insert the expenses.
+Web application to track your purchases, incomes and all consumption history.
+[TBD] Read recipes with OCR for easly insert the purchases.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server

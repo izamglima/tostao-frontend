@@ -3,9 +3,30 @@
 input,  
 textarea {  
     @include mixins.input-placeholder {
-        color: red;
+        color: $light-accent-font-color;
     }
 }
+
+textarea {
+    width: 100%;
+    color: $accent-font-color;
+    font-size: 1em;
+    border: 0;
+    padding: 1em;
+    box-sizing: border-box;
+    @include border-radius(3px);
+    @include box-shadow(0, 4px, 4px, rgba(0, 0, 0, 0.25));  
+}
+
+input[type=checkbox] {
+    width: 1.5em;
+    height: 1.5em;
+
+    &:checked {
+        box-shadow: 0px 4px 4px $light-accent-font-color;
+    }
+}
+
 
 .buttons-container {
     @include push-auto;
@@ -13,6 +34,8 @@ textarea {
 
 button {
     cursor: pointer;
+    border: none;
+    background-color: transparent;
 
     &:focus {
         outline: none;
@@ -21,7 +44,6 @@ button {
 
 .button {
     display: block;
-    border: none;
     padding: 18px 15px;
     @include border-radius(40px);
     margin-bottom: 10px;
@@ -36,9 +58,16 @@ button {
         background-color: rgba($primary, .9);
     }
 }
-.button-empty {
-    background-color:  $light-button;
+.button-secondary {
+    background-color: $light-button;
     color: $white-font-color;
+}
+
+.button-circle {
+    .material-icons {
+        font-size: 2em;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 }
 
 .form {
@@ -47,6 +76,7 @@ button {
 
 .form-text-field {
     margin-bottom: 1em;
+    position: relative;
 
     label {
         display: block;
@@ -68,6 +98,26 @@ button {
         &:focus {
             outline: none;
         }
+    }
+}
+
+.form-with-icon {
+    input {
+        padding-left: 2.2em;
+        padding-top: 0.8em;
+        box-sizing: border-box;
+    }
+    label {
+        position: absolute;
+        bottom: 32px;
+        left: 35px;
+        font-size: 0.8em;
+    }
+    .material-icons {
+        position: absolute;
+        color: $light-accent-font-color;
+        bottom: 16px;
+        left: 6px;
     }
 }
 

@@ -18,15 +18,3 @@
     align-self: center;
     text-align: right;
 }
-
-main {
-    margin: 2em 0;
-}
-
-/* large tablet & laptop styles */
-@media screen and (min-width: 960px){ 
-    main {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-}

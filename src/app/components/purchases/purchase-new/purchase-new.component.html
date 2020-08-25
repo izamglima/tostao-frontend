@@ -1,0 +1,153 @@
+<app-header></app-header>
+
+<div class="wrapper wrapper-desktop">
+    <section class="smaller-section title-section">
+        <div class="title-icon-box">
+            <i class="material-icons">money_off</i>
+        </div>
+        <h3>Create new purchase</h3>
+    </section>
+
+    <form action="" class="create-form">
+        <div class="form-text-field form-with-icon side-by-side-text-form margin-right">
+            <i class="material-icons">store</i>
+            <label for="marketplace">Marketplace</label>
+            <input type="text" name="marketplace" id="marketplace">   
+        </div>
+
+        <div class="form-text-field form-with-icon side-by-side-text-form">
+            <i class="material-icons">account_balance</i>
+            <label for="currency">Currency</label>
+            <input type="text" name="currency" id="currency">               
+        </div>
+
+        <div class="form-text-field form-with-icon side-by-side-text-form margin-right">
+            <i class="material-icons">today</i>
+            <label for="date">Date</label>
+            <input type="text" name="date" id="date">
+        </div>
+
+        <div class="form-text-field form-with-icon side-by-side-text-form">
+            <i class="material-icons">label</i>
+            <label for="category">Category</label>
+            <input type="text" name="category" id="category">   
+        </div>
+
+        <div class="text-center insert-note-container" *ngIf="!noteToggle">
+            <button name="insert note" (click)="noteToggle = true">
+                <i class="material-icons">note_add</i>
+                Insert note...
+            </button>
+        </div>
+        <div class="close-note-container" *ngIf="noteToggle">
+            <button name="cancel note" (click)="noteToggle = false">
+                <i class="material-icons">close</i>
+                Cancel
+            </button>
+            <textarea name="note" id="note" cols="30" rows="5" placeholder="Insert note"></textarea>
+        </div>
+        
+
+        <div class="section add-purchase-item">
+            <p>Items:</p>
+
+            <article class="box-shared">
+                <div class="form-text-field form-with-icon max-size-text-form">
+                    <i class="material-icons">shopping_basket</i>
+                    <label for="product">Product</label>
+                    <input type="text" name="product" id="product">   
+                </div>
+
+                <div class="form-text-field form-with-icon side-by-side-text-form margin-right">
+                    <i class="material-icons">swap_vert</i>
+                    <label for="quantity">Quantity</label>
+                    <input type="text" name="quantity" id="quantity">   
+                </div>
+
+                <div class="form-text-field form-with-icon side-by-side-text-form">
+                    <i class="material-icons">attach_money</i>
+                    <label for="price">Price</label>
+                    <input type="text" name="price" id="price">   
+                </div>
+            
+                <div class="form-checkbox-field">
+                    <input type="checkbox" (ngModel)="categoryToggle" 
+                    (click)="toggleVisibility($event)" name="Insert another category" id="another-category">
+                    <label for="another-category">Insert another category</label>   
+                </div>
+                <div class="category-input-container" *ngIf="marked">
+                    <div class="form-text-field form-with-icon">
+                        <i class="material-icons">label</i>
+                        <label for="category">Category</label>
+                        <input type="text" name="category" id="category">   
+                    </div>
+                </div>
+
+                <div class="actions-container text-center">
+                    <hr>
+                    <button name="delete item">
+                        <i class="material-icons">delete_outline</i>    
+                    </button>
+                </div>
+            </article>
+
+            <article class="box-shared">
+                <div class="form-text-field form-with-icon max-size-text-form">
+                    <i class="material-icons">shopping_basket</i>
+                    <label for="product">Product</label>
+                    <input type="text" name="product" id="product">   
+                </div>
+
+                <div class="form-text-field form-with-icon side-by-side-text-form margin-right">
+                    <i class="material-icons">swap_vert</i>
+                    <label for="quantity">Quantity</label>
+                    <input type="text" name="quantity" id="quantity">   
+                </div>
+
+                <div class="form-text-field form-with-icon side-by-side-text-form">
+                    <i class="material-icons">attach_money</i>
+                    <label for="price">Price</label>
+                    <input type="text" name="price" id="price">   
+                </div>
+            
+                <div class="form-checkbox-field">
+                    <input type="checkbox" (ngModel)="categoryToggle" 
+                    (click)="toggleVisibility($event)" name="Insert another category" id="another-category">
+                    <label for="another-category">Insert another category</label>   
+                </div>
+                <div class="category-input-container" *ngIf="marked">
+                    <div class="form-text-field form-with-icon">
+                        <i class="material-icons">label</i>
+                        <label for="category">Category</label>
+                        <input type="text" name="category" id="category">   
+                    </div>
+                </div>
+                
+                <div class="actions-container text-center">
+                    <hr>
+                    <button name="delete item">
+                        <i class="material-icons">delete_outline</i>    
+                    </button>
+                </div>
+            </article>
+
+            <button name="New item" class="pull-right add-purchase-item-button">
+                New item
+                <i class="material-icons">add_circle</i>
+            </button>
+        </div>
+    
+    </form>
+
+    <div class="total-box">
+        <p>Total: </p>
+        <span>R$ 234,87</span>
+    </div>
+
+    <section class="section">
+        <div class="text-center buttons-container-add-action">
+            <a href="purchases" class="button button-secondary" name="cancel" value="Cancel">Cancel</a>
+            <button class="button button-default" name="save" value="save">Save</button>
+        </div>
+    </section>
+</div>

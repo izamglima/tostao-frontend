@@ -1,0 +1,128 @@
+.header-view-purchase {
+    display: flex;
+    padding: 0 1em;
+
+    .header-view-purchase-icons {
+        flex-grow: 1;
+        align-self: center;
+        text-align: left;
+
+        i {
+            display: block;
+            margin-top: 4px;
+        }
+    }
+    .header-view-purchase-title {
+        flex-grow: 2;
+
+        p {
+            margin-bottom: 0;
+            margin-top: 0.5em;
+        }
+    }
+    .header-view-purchase-values {
+        flex-grow: 5;
+        text-align: right;
+        
+        span {
+            color: $accent-font-color;
+            margin-top: 0.5em;
+            display: block;
+        }
+    }
+}
+
+.view-purchase-products-title {
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+    margin-bottom: 1em;
+
+    div * {
+        display: inline-block;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    i {
+        padding-right: 20px;
+        vertical-align: bottom;
+    }
+}
+
+.view-purchase-products-description {
+    color: $accent-font-color;
+    text-transform: uppercase;
+    padding: 0 1em;
+    
+    p {
+        margin-bottom: 0;
+
+        &:nth-of-type(1) {
+            max-width: 80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        &:nth-of-type(2) {
+            position: relative;
+            text-align: right;
+            top: -35px;
+        }
+    }
+
+    span {
+        margin-right: 1em;
+
+        &:nth-of-type(1) {
+            margin-left: 2em;
+        }
+    }
+}
+
+.view-purchase-total {
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+
+    p {
+        color: $primary-font-color;
+        font-size: 1.5em;
+    }
+}
+
+.hr-dotted {
+    border: none;
+    margin: 7px 0 0 0;
+    
+    &::before {
+        content: "*************************************************************************************************************************";
+        display: block;
+        text-align: center;
+    }
+}
+
+
+/* small tablet styles */
+@media screen and (min-width: 620px){ 
+    .wrapper-view-purchase {
+        max-width: 65vw;
+    }
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px){ 
+    .wrapper-view-purchase {
+        max-width: 55vw;
+    } 
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){ 
+    .wrapper-view-purchase {
+        max-width: 35vw;
+    }     
+}

@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+<div class="wrapper">
+    <section class="smaller-section title-section">
+        <div class="title-icon-box">
+            <i class="material-icons">shopping_basket</i>
+        </div>
+        <h3>Products</h3>
+        <a href="/products/new" name="New product" class="pull-right top-header-link">
+            <i class="material-icons">add_circle</i>
+        </a>
+    </section>
+
+    <section class="smaller-section filter-box">
+        <details name="Open filter form.">
+            <summary>Filter</summary>
+            
+            <form action="" class="filter-form">
+                <div class="form-text-field form-with-icon">
+                    <i class="material-icons">shopping_basket</i>
+                    <label for="product">Product</label>
+                    <input type="text" name="products" id="products">   
+                </div>
+
+                <div class="form-text-field form-with-icon">
+                    <i class="material-icons">today</i>
+                    <label for="initial-date">From</label>
+                    <input type="text" name="initial-date" id="initial-date">               
+                </div>
+
+                <div class="form-text-field form-with-icon">
+                    <i class="material-icons">today</i>
+                    <label for="final-date">To</label>
+                    <input type="text" name="final-date" id="final-date">
+                </div>
+
+                <div class="form-filter-button pull-right">
+                    <button class="button button-circle" name="filter" id="filter">
+                        <i class="material-icons">search</i>
+                    </button>
+                </div>
+            </form>
+        </details>
+    </section>
+
+    <div class="container-box-shared">
+        <article class="box-shared box-shared-responsive">
+            <div class="box-shared-texts">
+                <p>Product</p>
+                <span>Bananen</span>
+            </div>
+            <div class="box-shared-texts">
+                <p>Created</p>
+                <span>14/05/2020, 10:20</span>
+            </div>
+            <div class="box-shared-texts">
+                <p>Updated</p>
+                <span>14/05/2020, 10:20</span>
+            </div>
+            <hr>
+            <br>
+            <div class="actions-container text-center">
+                <a href="products/view" name="see more" class="actions-container-action">
+                    <i class="material-icons">info_outline</i>    
+                </a>
+                <a name="edit item" class="actions-container-action">
+                    <i class="material-icons">edit</i>    
+                </a>
+                <a name="delete item" class="actions-container-action">
+                    <i class="material-icons">delete_outline</i>    
+                </a>
+            </div>
+        </article>
+       
+        <article class="box-shared box-shared-responsive">
+            <div class="box-shared-texts">
+                <p>Product</p>
+                <span>Stroopwaffles <3 </span>
+            </div>
+            <div class="box-shared-texts">
+                <p>Created</p>
+                <span>14 de maio de 2020, 10:20</span>
+            </div>
+            <div class="box-shared-texts">
+                <p>Updated</p>
+                <span>14/05/2020, 10:20</span>
+            </div>
+            <hr>
+            <br>
+            <div class="actions-container text-center">
+                <a href="products/view" name="see more" class="actions-container-action">
+                    <i class="material-icons">info_outline</i>    
+                </a>
+                <a name="edit item" class="actions-container-action">
+                    <i class="material-icons">edit</i>    
+                </a>
+                <a name="delete item" class="actions-container-action">
+                    <i class="material-icons">delete_outline</i>    
+                </a>
+            </div>
+        </article>
+    </div>
+</div>

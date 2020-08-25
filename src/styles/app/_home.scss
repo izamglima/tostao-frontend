@@ -1,3 +1,12 @@
+/*.background-home {
+    width: 100%;
+    height: 100%;
+    background: url('../../../src/assets/images/pork.png') no-repeat;
+    background-size: 55%;
+    background-position-x: 110%;
+    background-position-y: 15em;
+}*/
+
 .logo {
     border: 0.5em solid $primary;
     background-color: $secondary;
@@ -16,13 +25,6 @@
     }
 }
 
-.section {
-    @include push-auto;
-    text-align: center;
-    padding: 2em 0;
-    margin-bottom: 4em;
-}
-
 .section-secondary {
     background-color: $secondary;
     padding: 4.5em 2em;
@@ -35,7 +37,6 @@
 
 footer {
     @include push-auto;
-    text-align: center;
     padding: 1.5em 0;
     border-top: 1px solid $primary;
     width: 50vw;

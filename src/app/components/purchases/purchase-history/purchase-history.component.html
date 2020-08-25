@@ -1,0 +1,74 @@
+<app-header></app-header>
+
+<div class="wrapper">
+    <section class="smaller-section title-section">
+        <div class="title-icon-box">
+            <i class="material-icons">bar_chart</i>
+        </div>
+        <h3>Purchase History</h3>
+    </section>
+
+    <section class="smaller-section filter-box">
+        <details name="Open filter form.">
+            <summary>Filter by specific date</summary>
+            
+            <form action="" class="filter-form">
+                <div class="form-text-field form-with-icon">
+                    <i class="material-icons">today</i>
+                    <label for="initial-date">From</label>
+                    <input type="text" name="initial-date" id="initial-date">               
+                </div>
+
+                <div class="form-text-field form-with-icon">
+                    <i class="material-icons">today</i>
+                    <label for="final-date">To</label>
+                    <input type="text" name="final-date" id="final-date">
+                </div>
+                
+                <div class="form-text-field form-with-icon">
+                    <i class="material-icons">date_range</i>
+                    <label for="group-by">Group by</label>
+                    <input type="text" name="group-by" id="group-by">
+                </div>
+            </form>
+        </details>
+
+        <div class="filter-button-container">
+            <button class="filter-button" name="aa">1 month ago</button>
+            <button class="filter-button">3 months ago</button>
+            <button class="filter-button">6 month ago</button>
+            <button class="filter-button">1 year ago</button>
+            <button class="filter-button">3 years ago </button> 
+        </div>
+
+        <div class="filter-button-container">
+            <p>Select the currency:</p>
+            <div class="form-checkbox-field">
+                <input type="checkbox" name="Select BRL currency." id="BRL">
+                <label for="BRL">BRL</label>   
+            </div>
+
+            <div class="form-checkbox-field">
+                <input type="checkbox" name="Select EUR currency." id="EUR">
+                <label for="EUR">EUR</label>
+            </div>
+
+            <div class="form-checkbox-field">
+                <input type="checkbox" name="Select USD currency." id="USD">
+                <label for="USD">USD</label>
+            </div>
+
+            <div class="form-filter-button">
+                <button class="button button-circle" name="filter" id="filter">
+                    <i class="material-icons">search</i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="clear section">
+        <p>TBD - Gráfico 1 linhas</p>
+    </section>
+    <section class="section">
+        <p>TBD - Gráfico 2 pizza</p>
+    </section>
+</div>

@@ -1,0 +1,60 @@
+.total-box {
+    display: flex;
+    justify-content: center;
+    background-color: $secondary;
+    padding: 1em;
+    @include border-radius(15px);
+    color: $white-font-color;
+    font-size: 1.3em;
+    
+    p {
+        color: $white-font-color;
+        padding-right: 1em;
+        margin-bottom: 0;
+    }
+}
+
+.buttons-container-add-action {
+    button {
+        width: 100%;
+    }
+}
+
+.insert-note-container {
+    button {
+        color: $primary-font-color;
+        font-size: 1em;
+
+        .material-icons {
+            vertical-align: text-bottom;    
+        }
+    }
+}
+
+.close-note-container {
+    button {
+        color: $primary-font-color;
+        display: block;
+        margin: 0 auto;
+        font-size: 1em;
+        padding-bottom: 1em;
+
+        .material-icons {
+            vertical-align: text-bottom;
+        }
+    }
+}
+
+.category-input-container {
+    padding-top: 1em;
+}
+
+.add-purchase-item {
+    .box-shared {
+        &:nth-of-type(1) {
+            .actions-container {
+                display: none;
+            }  
+        }
+    }
+}
