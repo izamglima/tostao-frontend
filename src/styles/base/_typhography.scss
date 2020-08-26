@@ -37,6 +37,10 @@ p {
 a {
     color: $primary;
     text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 h1, h2, h3 {

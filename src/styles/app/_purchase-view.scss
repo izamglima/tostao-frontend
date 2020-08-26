@@ -104,25 +104,3 @@
         text-align: center;
     }
 }
-
-
-/* small tablet styles */
-@media screen and (min-width: 620px){ 
-    .wrapper-view-purchase {
-        max-width: 65vw;
-    }
-}
-
-/* large tablet & laptop styles */
-@media screen and (min-width: 960px){ 
-    .wrapper-view-purchase {
-        max-width: 55vw;
-    } 
-}
-
-/* desktop styles */
-@media screen and (min-width: 1200px){ 
-    .wrapper-view-purchase {
-        max-width: 35vw;
-    }     
-}

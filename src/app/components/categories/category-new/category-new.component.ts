@@ -4,11 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-category-new',
   templateUrl: './category-new.component.html'
 })
-export class CategoryNewComponent implements OnInit {
+export class CategoryNewComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  newCategory = '';
 }
