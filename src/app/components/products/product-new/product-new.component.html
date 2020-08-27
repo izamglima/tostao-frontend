@@ -11,14 +11,21 @@
     <form action="">
 
         <div class="form-text-field">
-            <label for="product">Product</label>
-            <input type="text" name="product" id="product">   
+            <label for="newProduct">Product</label>
+            <input type="text" name="newProduct" class="form-control"
+            id="newProduct" [(ngModel)]="newProduct" 
+            #product="ngModel" required >   
+        </div>
+        <div *ngIf="product.invalid && (product.dirty || product.touched)" class="alert alert-danger">
+            <div *ngIf="product.errors.required">
+                Product is required.
+            </div>
         </div>
         
         <section class="section">
             <div class="text-center buttons-container-add-action">
                 <a href="products" class="button button-secondary" name="cancel" value="Cancel">Cancel</a>
-                <button class="button button-default" name="save" value="save">Save</button>
+                <button type="submit" class="button button-default" name="save" value="save" [disabled]="product.pristine || product.invalid">Save</button>
             </div>
         </section>
     </form>

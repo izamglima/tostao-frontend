@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { MarketplaceNewComponent } from './marketplace-new.component';
 
 describe('MarketplaceNewComponent', () => {
@@ -8,6 +8,7 @@ describe('MarketplaceNewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [ MarketplaceNewComponent ]
     })
     .compileComponents();
