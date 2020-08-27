@@ -1,6 +1,9 @@
 .wrapper {
     margin: 0 20px;
 }
+.wrapper-small {
+
+}
 
 .grid {
     display: grid;
@@ -187,6 +190,9 @@ hr {
         max-width: 80vw;
         @include push-auto;
     }
+    .wrapper-small {
+        max-width: 65vw;
+    }
 }
 
 /* large tablet & laptop styles */
@@ -202,12 +208,20 @@ hr {
         max-width: 30%;
         margin: 0 auto;
     }
+
+    .wrapper-small {
+        max-width: 55vw;
+    } 
 }
 
 /* desktop styles */
 @media screen and (min-width: 1200px){ 
     .wrapper {
         max-width: 70vw;
+    }
+
+    .wrapper-small {
+        max-width: 35vw;
     }
 
     .box-shared-responsive {

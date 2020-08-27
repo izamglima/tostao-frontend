@@ -8,16 +8,23 @@
         <h3>Create new category</h3>
     </section>
 
-    <form action="/categories" method="post">
+    <form >
         <div class="form-text-field">
-            <label for="category">Category</label>
-            <input type="text" name="category" id="category">   
+            <label for="newCategory">Category</label>
+            <input type="text" name="newCategory" class="form-control"
+            id="newCategory" [(ngModel)]="newCategory" 
+            #category="ngModel" required >
         </div>
-        
+        <div *ngIf="category.invalid && (category.dirty || category.touched)" class="alert alert-danger">
+            <div *ngIf="category.errors.required">
+                Category is required.
+            </div>
+        </div>
+
         <section class="section">
             <div class="text-center buttons-container-add-action">
                 <a href="categories" class="button button-secondary" name="cancel" value="Cancel">Cancel</a>
-                <button class="button button-default" name="save" value="save">Save</button>
+                <button type="submit" class="button button-default" name="save" value="save" [disabled]="category.pristine || category.invalid">Save</button>
             </div>
         </section>
     </form>
