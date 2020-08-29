@@ -4,11 +4,9 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-marketplace-new',
   templateUrl: './marketplace-new.component.html'
 })
-export class MarketplaceNewComponent implements OnInit {
+export class MarketplaceNewComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
+  newMarketplace = '';
 
 }

@@ -11,14 +11,21 @@
     <form action="">
 
         <div class="form-text-field">
-            <label for="marketplace">Marketplace</label>
-            <input type="text" name="marketplace" id="marketplace">   
+            <label for="newMarketplace">Marketplace</label>
+            <input type="text" name="newMarketplace" class="form-control"
+            id="newMarketplace" [(ngModel)]="newMarketplace" 
+            #marketplace="ngModel" required >
+        </div>
+        <div *ngIf="marketplace.invalid && (marketplace.dirty || marketplace.touched)" class="alert alert-danger">
+            <div *ngIf="marketplace.errors.required">
+                Marketplace is required.
+            </div>
         </div>
         
         <section class="section">
             <div class="text-center buttons-container-add-action">
                 <a href="marketplaces" class="button button-secondary" name="cancel" value="Cancel">Cancel</a>
-                <button class="button button-default" name="save" value="save">Save</button>
+                <button type="submit" class="button button-default" name="save" value="save" [disabled]="marketplace.pristine || marketplace.invalid">Save</button>
             </div>
         </section>
     </form>
