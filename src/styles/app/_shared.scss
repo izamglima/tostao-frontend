@@ -103,7 +103,8 @@
 }
 
 hr {
-    border: 0.9px dashed $primary-font-color;
+    border-bottom: 1.5px dashed $primary-font-color;
+    border-top: none;
 }
 
 .actions-container {

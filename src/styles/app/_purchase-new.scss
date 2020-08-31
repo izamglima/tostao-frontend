@@ -50,7 +50,7 @@
 }
 
 .add-purchase-item {
-    .box-shared {
+    div {
         &:nth-of-type(1) {
             .actions-container {
                 display: none;

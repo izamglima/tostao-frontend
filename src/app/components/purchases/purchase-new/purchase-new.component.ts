@@ -7,35 +7,33 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class PurchaseNewComponent implements OnInit {
   public newPurchase: FormGroup;
-  public purchaseItem: FormArray;
-  constructor(private fb: FormBuilder) { }
-
+  public purchaseItems: FormArray;
   noteToggle = false;
   marked = false;
-  toggleVisibility(e): void {
-    this.marked = e.target.checked;
-  }
+  defaultCategory = '';
+
+  constructor(private formBuilder: FormBuilder) { }
 
   addNewItem(): FormGroup {
-    return this.fb.group({
+    return this.formBuilder.group({
       product: [null, Validators.compose([Validators.required])],
       quantity: [null, Validators.compose([Validators.required])],
       price: [null, Validators.compose([Validators.required])],
-      category: [null, Validators.compose([Validators.required])]
+      category: [this.defaultCategory, Validators.compose([Validators.required])]
     });
   }
 
-  // add a purchaseItem form group
+  // insert a new item in purchaseItems form group
   showNewItem() {
-    this.purchaseItem.push(this.addNewItem());
+    this.purchaseItems.push(this.addNewItem());
   }
 
-  // remove purchaseItem from group
+  // remove item in purchaseItems from group
   removeNewItem(index) {
-    this.purchaseItem.removeAt(index);
+    this.purchaseItems.removeAt(index);
   }
 
-  get purchaseItemFormGroup() {
+  get purchaseItemsFormGroup() {
     return this.newPurchase.get('items') as FormArray;
   }
 
@@ -43,36 +41,34 @@ export class PurchaseNewComponent implements OnInit {
     this.newPurchase.patchValue({'note':null});
   }
 
+  categoryChanged(e) {
+    this.defaultCategory = e.target.value;
+    this.applyValueToCategory(e.target.value, 0);
+  }
+
+  applyValueToCategory(value, index) {
+    this.purchaseItems.controls[index].patchValue({'category': value});
+  }
+
   ngOnInit(): void {
-    this.newPurchase = this.fb.group({
+    this.newPurchase = this.formBuilder.group({
       marketplace: [null, Validators.compose([Validators.required])],
       currency: [null, Validators.compose([Validators.required])],
       date: [null, Validators.compose([Validators.required])],
       note: [null],
-      items: this.fb.array([this.addNewItem()])
+      items: this.formBuilder.array([this.addNewItem()])
     });
-    // set purchaseItem to the form control containing items
-    this.purchaseItem = this.newPurchase.get('items') as FormArray;
+
+    // set purchaseItems to the form control containing items
+    this.purchaseItems = this.newPurchase.get('items') as FormArray;
   }
 
   onSubmit() {
     console.log(this.newPurchase.value);
   }
 
-  //form object
-  /*newPurchase = new FormGroup({
-    marketplace: new FormControl('', Validators.required),
-    currency: new FormControl('', Validators.required),
-    date: new FormControl('', Validators.required),
-    note: new FormControl(''),
-    purchaseItem: new FormGroup({
-      product: new FormControl('', Validators.required),
-      quantity: new FormControl('', Validators.required),
-      price: new FormControl('', Validators.required),
-      category: new FormControl('')
-    })
-  })*/
-
-
+  toggleVisibility(e): void {
+    this.marked = e.target.checked;
+  }
 
 }
