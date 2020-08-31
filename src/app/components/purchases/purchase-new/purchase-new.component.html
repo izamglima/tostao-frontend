@@ -9,28 +9,22 @@
     </section>
 
     <form class="create-form" [formGroup]="newPurchase">
-        <div class="form-text-field form-with-icon side-by-side-text-form margin-right">
+        <div class="form-text-field form-with-icon margin-right max-size-text-form">
             <i class="material-icons">store</i>
             <label for="marketplace">Marketplace</label>
             <input type="text" name="marketplace" id="marketplace" formControlName="marketplace" required>   
         </div>
 
-        <div class="form-text-field form-with-icon side-by-side-text-form">
+        <div class="form-text-field form-with-icon side-by-side-text-form margin-right">
             <i class="material-icons">account_balance</i>
             <label for="currency">Currency</label>
             <input type="text" name="currency" id="currency" formControlName="currency" required>               
         </div>
 
-        <div class="form-text-field form-with-icon side-by-side-text-form margin-right">
+        <div class="form-text-field form-with-icon side-by-side-text-form">
             <i class="material-icons">today</i>
             <label for="date">Date</label>
             <input type="text" name="date" id="date" formControlName="date" required>
-        </div>
-
-        <div class="form-text-field form-with-icon side-by-side-text-form">
-            <i class="material-icons">label</i>
-            <label for="category">Category</label>
-            <input type="text" name="category" id="category" (change)="categoryChanged($event)" required>   
         </div>
 
         <div class="text-center insert-note-container" *ngIf="!noteToggle">
@@ -71,17 +65,10 @@
                         <input type="text" name="price" id="price" formControlName="price" required>   
                     </div>
                 
-                    <div class="form-checkbox-field">
-                        <input type="checkbox" (click)="toggleVisibility($event)" 
-                        name="Insert another category" id="another-category-{{i}}">
-                        <label for="another-category-{{i}}">Insert another category</label>   
-                    </div>
-                    <div class="category-input-container" *ngIf="marked">
-                        <div class="form-text-field form-with-icon">
-                            <i class="material-icons">label</i>
-                            <label for="category">Category</label>
-                            <input type="text" name="category" id="category" formControlName="category">   
-                        </div>
+                    <div class="form-text-field form-with-icon max-size-text-form">
+                        <i class="material-icons">label</i>
+                        <label for="category">Category</label>
+                        <input type="text" name="category" id="category" formControlName="category" (change)="setDefaultCategory($event)">   
                     </div>
     
                     <div class="actions-container text-center">

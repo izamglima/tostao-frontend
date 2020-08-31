@@ -41,13 +41,8 @@ export class PurchaseNewComponent implements OnInit {
     this.newPurchase.patchValue({'note':null});
   }
 
-  categoryChanged(e) {
+  setDefaultCategory(e) {
     this.defaultCategory = e.target.value;
-    this.applyValueToCategory(e.target.value, 0);
-  }
-
-  applyValueToCategory(value, index) {
-    this.purchaseItems.controls[index].patchValue({'category': value});
   }
 
   ngOnInit(): void {
