@@ -9,7 +9,6 @@ export class PurchaseNewComponent implements OnInit {
   public newPurchase: FormGroup;
   public purchaseItems: FormArray;
   noteToggle = false;
-  marked = false;
   defaultCategory = '';
 
   constructor(private formBuilder: FormBuilder) { }
@@ -61,9 +60,4 @@ export class PurchaseNewComponent implements OnInit {
   onSubmit() {
     console.log(this.newPurchase.value);
   }
-
-  toggleVisibility(e): void {
-    this.marked = e.target.checked;
-  }
-
 }
