@@ -29,8 +29,8 @@ describe('NewPurchaseComponent', () => {
       marketplace: 'Albert Heijn',
       currency: 'EUR'
     };
-    component.newPurchase.controls['marketplace'].setValue(testUser.marketplace);
-    component.newPurchase.controls['currency'].setValue(testUser.currency);
+    component.newPurchase.controls.marketplace.setValue(testUser.marketplace);
+    component.newPurchase.controls.currency.setValue(testUser.currency);
     expect(component.newPurchase.value.marketplace).toBe(testUser.marketplace);
   });
 
@@ -49,7 +49,7 @@ describe('NewPurchaseComponent', () => {
   });
 
   it('should clean note value on cleanPurchaseNote', () => {
-    let text = 'some text to test the function';
+    const text = 'some text to test the function';
     component.newPurchase.value.note = text;
     expect(component.newPurchase.value.note).toBe(text);
 
@@ -58,7 +58,7 @@ describe('NewPurchaseComponent', () => {
   });
 
   it('should set default category correctly', () => {
-    let categoryText = 'Bakery';
+    const categoryText = 'Bakery';
     component.newPurchase.value.items[0].category = categoryText;
     component.setDefaultCategory(categoryText);
     component.showNewItem();
