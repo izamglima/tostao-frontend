@@ -23,24 +23,24 @@ export class PurchaseNewComponent implements OnInit {
   }
 
   // insert a new item in purchaseItems form group
-  showNewItem() {
+  showNewItem(): void {
     this.purchaseItems.push(this.addNewItem());
   }
 
   // remove item in purchaseItems from group
-  removeNewItem(index) {
+  removeNewItem(index): void {
     this.purchaseItems.removeAt(index);
   }
 
-  get purchaseItemsFormGroup() {
+  get purchaseItemsFormGroup(): FormArray {
     return this.newPurchase.get('items') as FormArray;
   }
 
-  cleanPurchaseNote() {
-    this.newPurchase.patchValue({'note':null});
+  cleanPurchaseNote(): void {
+    this.newPurchase.patchValue({note: null});
   }
 
-  setDefaultCategory(e) {
+  setDefaultCategory(e): void {
     this.defaultCategory = e.target.value;
   }
 
@@ -57,7 +57,7 @@ export class PurchaseNewComponent implements OnInit {
     this.purchaseItems = this.newPurchase.get('items') as FormArray;
   }
 
-  onSubmit() {
+  onSubmit(): void {
     console.log(this.newPurchase.value);
   }
 }
