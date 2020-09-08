@@ -68,7 +68,7 @@
                     <div class="form-text-field form-with-icon max-size-text-form">
                         <i class="material-icons">label</i>
                         <label for="category">Category</label>
-                        <input type="text" name="category" id="category" formControlName="category" (change)="setDefaultCategory($event)">   
+                        <input type="text" name="category" id="category" formControlName="category" (change)="setDefaultCategory($event.target.value)">   
                     </div>
     
                     <div class="actions-container text-center">
