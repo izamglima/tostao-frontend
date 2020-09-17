@@ -31,7 +31,6 @@
 
 .menu-container {
     position: absolute;
-    width: 375px;
     height: 100vh;
     background-color: $secondary-full;
     padding: 0 1.5em;
@@ -134,4 +133,14 @@
             top: 3px;
         }
     }
+}
+
+.slide-right-menu {
+	-webkit-animation: slide-right-menu 0.3s ease both;
+	animation: slide-right-menu 0.3s ease both;
+}
+
+.slide-left-menu {
+    -webkit-animation: slide-left-menu 0.3s ease both;
+	animation: slide-left-menu 0.3s ease both;
 }

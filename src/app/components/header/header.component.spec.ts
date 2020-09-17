@@ -21,4 +21,20 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should open the menu', () => {
+    expect(component.slideRight).toBeFalse();
+    expect(component.slideLeft).toBeFalse();
+    component.openMenu();
+    expect(component.slideRight).toBeTrue();
+    expect(component.slideLeft).toBeFalse();
+  });
+
+  it('should close the menu', () => {
+    expect(component.slideRight).toBeFalse();
+    expect(component.slideLeft).toBeFalse();
+    component.closeMenu();
+    expect(component.slideRight).toBeFalse();
+    expect(component.slideLeft).toBeTrue();
+  });
 });

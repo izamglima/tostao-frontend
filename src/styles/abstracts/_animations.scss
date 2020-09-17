@@ -1,0 +1,51 @@
+/**
+ * ----------------------------------------
+ * animation slide-right-menu
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-right-menu {
+    0% {
+        -webkit-transform: translateX(-200px);
+                transform: translateX(-200px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+@keyframes slide-right-menu {
+    0% {
+        -webkit-transform: translateX(-200px);
+                transform: translateX(-200px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-left-menu
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-left-menu {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-375px);
+                transform: translateX(-375px);
+    }
+}
+@keyframes slide-left-menu {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-375px);
+                transform: translateX(-375px);
+    }
+}

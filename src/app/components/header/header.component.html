@@ -1,11 +1,16 @@
 <header class="header">
-    <button class="menu-button" name="menu" value="menu" (click)="menuContainerToggle = true">
+    <button class="menu-button" name="menu" value="menu" (click)="openMenu()">
         <div></div>
         <div></div>
         <div></div>
     </button>
-    <section class="menu-container" *ngIf="menuContainerToggle">
-        <button class="menu-close" (click)="menuContainerToggle = false">
+    <section class="menu-container"
+        *ngIf="slideRight"
+        [ngClass]="{
+            'slide-right-menu': slideRight,
+            'slide-left-menu': slideLeft
+            }">
+        <button class="menu-close" (click)="closeMenu()">
             <i class="material-icons">close</i>
         </button>
         <div class="menu-header text-center">
