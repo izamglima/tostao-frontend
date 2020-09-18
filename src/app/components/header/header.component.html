@@ -4,41 +4,45 @@
         <div></div>
         <div></div>
     </button>
-    <div class="menu-container" *ngIf="menuContainerToggle">
+    <section class="menu-container" *ngIf="menuContainerToggle">
         <button class="menu-close" (click)="menuContainerToggle = false">
             <i class="material-icons">close</i>
         </button>
         <div class="menu-header text-center">
             <i class="material-icons">face</i>
             <p>
-                Izabela lima 
-                <button class="menu-logout" name="logout menu." value="logout menu"><i class="material-icons">more_vert</i></button>
+                Izabela lima
+                <button class="menu-logout" name="logout menu." value="logout menu" (click)="logoutBoxToggle = !logoutBoxToggle"><i class="material-icons">more_vert</i></button>
             </p>
+            <ul class="menu-account-links" [hidden]="logoutBoxToggle">
+                <li><a href="#">Editar</a></li>
+                <li><a href="#">Logout <i class="material-icons">exit_to_app</i></a></li>
+            </ul>
         </div>
         <div class="menu-content grid">
             <a href="purchase-history" class="text-center">
                 <i class="material-icons">bar_chart</i>
-                <p>Purchase History</p> 
+                <p>Purchase History</p>
             </a>
             <a href="price-history" class="text-center">
                 <i class="material-icons">show_chart</i>
-                <p>Price History</p> 
+                <p>Price History</p>
             </a>
             <a href="#" class="text-center">
                 <i class="material-icons">attach_money</i>
-                <p>Income or Recurring Purchases?</p> 
+                <p>Income or Recurring Purchases?</p>
             </a>
             <a href="purchases" class="text-center">
                 <i class="material-icons">money_off</i>
-                <p>Purchases</p> 
+                <p>Purchases</p>
             </a>
             <a href="categories" class="text-center">
                 <i class="material-icons">label</i>
-                <p>Categories</p> 
+                <p>Categories</p>
             </a>
             <a href="marketplaces" class="text-center">
                 <i class="material-icons">store</i>
-                <p>Marketplaces</p> 
+                <p>Marketplaces</p>
             </a>
             <a href="products" class="text-center">
                 <i class="material-icons">shopping_basket</i>
@@ -46,10 +50,10 @@
             </a>
             <a href="#0" class="text-center">
                 <i class="material-icons">settings</i>
-                <p>Configuration</p> 
+                <p>Configuration</p>
             </a>
         </div>
-    </div>
+    </section>
     <h1 class="header-title text-center"><a href="/" name="Link to home.">Tostão</a></h1>
 
 </header>
