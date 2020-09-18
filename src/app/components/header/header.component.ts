@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  logoutBoxToggle = true;
   menuContainerToggle = false;
   ngOnInit(): void {
   }
