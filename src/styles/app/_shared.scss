@@ -1,6 +1,6 @@
 .wrapper {
     margin: 0 20px;
-}  
+}
 
 .grid {
     display: grid;
@@ -23,10 +23,14 @@
     clear: both;
 }
 
+details {
+    cursor: pointer;
+}
+
 .header-title {
     padding: 15px 0;
     border-bottom: 1px solid $very-light-accent-font-color;
-    
+
     a {
         color: $primary-font-color;
     }
@@ -34,7 +38,7 @@
 
 .title-section {
     padding-top: 1.5em;
-    
+
     .title-icon-box {
         border: 1px solid $very-light-accent-font-color;
         @include border-radius(5px);
@@ -88,7 +92,7 @@
             color: $primary-font-color;
             padding-right: 1em;
         }
-    
+
         span {
             color: $accent-font-color;
             text-align: right;
@@ -107,7 +111,7 @@ hr {
 .actions-container {
     margin-top: 1em;
 
-    .actions-container-action { 
+    .actions-container-action {
         margin: 1em 1em 0 0;
 
         .material-icons {
@@ -124,7 +128,7 @@ hr {
     .material-icons {
         font-size: 2.5em;
         color: $primary;
-    }    
+    }
 }
 
 
@@ -194,7 +198,7 @@ hr {
 }
 
 /* large tablet & laptop styles */
-@media screen and (min-width: 960px){ 
+@media screen and (min-width: 960px){
     .box-shared-responsive {
         width: 48%;
         margin-right: 10px;
@@ -209,11 +213,11 @@ hr {
 
     .wrapper-small {
         max-width: 55vw;
-    } 
+    }
 }
 
 /* desktop styles */
-@media screen and (min-width: 1200px){ 
+@media screen and (min-width: 1200px){
     .wrapper {
         max-width: 70vw;
     }
@@ -238,7 +242,7 @@ hr {
     .side-by-side-text-form.margin-right {
         margin-right: 10px;
     }
-    
+
     .max-size-text-form {
         max-width: 97%;
     }
@@ -252,7 +256,7 @@ hr {
     .buttons-container-add-action {
         display: flex;
         justify-content: flex-end;
-        
+
         a, button.button-default {
             width: 20%;
             box-sizing: border-box;
