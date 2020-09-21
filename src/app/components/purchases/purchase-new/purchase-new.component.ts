@@ -52,7 +52,6 @@ export class PurchaseNewComponent implements OnInit {
       note: [null],
       items: this.formBuilder.array([this.addNewItem()])
     });
-    console.log(this.newPurchase.value.items.length);
     // set purchaseItems to the form control containing items
     this.purchaseItems = this.newPurchase.get('items') as FormArray;
   }
