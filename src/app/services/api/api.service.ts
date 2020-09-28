@@ -6,11 +6,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  API_ENDPOINT = 'http://142.93.13.202/api'
+  API_ENDPOINT = 'http://142.93.13.202/api';
 
   constructor(private httpClient: HttpClient) { }
 
+  getCategory(id) {
+    return this.httpClient.get(`${this.API_ENDPOINT}/categories/${id}`);
+  }
+
   getCategories() {
-    return this.httpClient.get(`${this.API_ENDPOINT}`);
+    return this.httpClient.get(`${this.API_ENDPOINT}/categories`);
   }
 }

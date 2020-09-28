@@ -7,7 +7,7 @@ import { ApiService } from '../../../services/api/api.service';
 })
 export class CategoriesListComponent implements OnInit {
   categories;
-  data: {};
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
