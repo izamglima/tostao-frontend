@@ -11,13 +11,13 @@ export class CategoriesListComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    //this.showCategories();
+  // this.showCategories();
   }
 
-  showCategories() {
+  showCategories(): void {
     this.apiService.getCategories().subscribe((data) => {
       console.log(data);
-      //assign the value to categories
-    })
+      // assign the value to categories
+    });
   }
 }

@@ -7,17 +7,17 @@ import { ApiService } from '../../../services/api/api.service';
 })
 export class CategoryViewComponent implements OnInit {
   category;
-  categoryId = 12;
+  categoryId = '12';
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.showCategory();
   }
 
-  showCategory() {
+  showCategory(): void {
     this.apiService.getCategory(this.categoryId).subscribe((data) => {
       console.log(data);
-      //assign the value to categories
-    })
+      // assign the value to categories
+    });
   }
 }
