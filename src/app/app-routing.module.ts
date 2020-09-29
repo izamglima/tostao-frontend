@@ -17,6 +17,10 @@ import { MarketplaceNewComponent } from './components/marketplaces/marketplace-n
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import { ProductViewComponent } from './components/products/product-view/product-view.component';
 import { ProductNewComponent } from './components/products/product-new/product-new.component';
+import { CurrenciesListComponent } from './components/currencies/currencies-list/currencies-list/currencies-list.component';
+import { CurrencyViewComponent } from './components/currencies/currency-view/currency-view/currency-view.component';
+import { CurrencyNewComponent } from './components/currencies/currency-new/currency-new/currency-new.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,7 +39,10 @@ const routes: Routes = [
   { path: 'marketplaces/new', component: MarketplaceNewComponent },
   { path: 'products', component: ProductsListComponent },
   { path: 'products/view', component: ProductViewComponent },
-  { path: 'products/new', component: ProductNewComponent }
+  { path: 'products/new', component: ProductNewComponent },
+  { path: 'currencies', component: CurrenciesListComponent },
+  { path: 'currencies/view', component: CurrencyViewComponent },
+  { path: 'currencies/new', component: CurrencyNewComponent }
 ];
 
 @NgModule({
