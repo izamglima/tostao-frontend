@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div class="wrapper">
+    <section class="smaller-section title-section">
+        <div class="title-icon-box">
+            <i class="material-icons">attach_money</i>
+        </div>
+        <h3>Create new currency</h3>
+    </section>
+
+    <form >
+        <div class="form-text-field">
+            <label for="newCurrency">Currency</label>
+            <input type="text" name="newCurrency" class="form-control"
+            id="newCurrency" [(ngModel)]="newCurrency"
+            #currency="ngModel" required >
+        </div>
+        <div *ngIf="currency.invalid && (currency.dirty || currency.touched)" class="alert alert-danger">
+            <div *ngIf="currency.errors.required">
+                Currency is required.
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="text-center buttons-container-add-action">
+                <a href="currencies" class="button button-secondary" name="cancel" value="Cancel">Cancel</a>
+                <button type="submit" class="button button-default" name="save" value="save" [disabled]="currency.pristine || currency.invalid">Save</button>
+            </div>
+        </section>
+    </form>
+</div>
