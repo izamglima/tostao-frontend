@@ -13,7 +13,7 @@ export class ApiInterceptorService implements HttpInterceptor {
 
     httpRequest = httpRequest.clone({
       setHeaders: {
-        Authorization: `YOUR_KEY_HERE`
+        Authorization: ``
       }
     });
 

@@ -44,22 +44,22 @@
     </section>
 
     <div class="container-box-shared">
-        <article class="box-shared box-shared-responsive">
+        <article *ngFor="let category of categories" class="box-shared box-shared-responsive">
             <div class="box-shared-texts">
                 <p>Category</p>
-                <span>Supermarkt</span>
+                <span>{{category.attributes.name}}</span>
             </div>
             <div class="box-shared-texts">
                 <p>Created</p>
-                <span>14/05/2020, 10:20</span>
+                <span>{{category.attributes['created-at'] | date:'dd/MM/yyyy'}}</span>
             </div>
             <div class="box-shared-texts">
                 <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
+                <span>{{category.attributes['updated-at'] | date:'dd/MM/yyyy'}}</span>
             </div>
             <hr>
             <div class="actions-container text-center">
-                <a title="View category" href="categories/view" name="see more" class="actions-container-action">
+                <a title="View category" href="categories/{{category.id}}" name="see more" class="actions-container-action">
                     <i class="material-icons">info_outline</i>
                 </a>
                 <a title="Edit category" name="edit item" class="actions-container-action">
@@ -71,144 +71,10 @@
             </div>
         </article>
 
-        <article class="box-shared box-shared-responsive">
-            <div class="box-shared-texts">
-                <p>Category</p>
-                <span>Bakery</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Created</p>
-                <span>14 de maio de 2020, 10:20</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
-            </div>
-            <hr>
-            <div class="actions-container text-center">
-                <a title="View category" href="categories/view" name="see more" class="actions-container-action">
-                    <i class="material-icons">info_outline</i>
-                </a>
-                <a title="Edit category" name="edit item" class="actions-container-action">
-                    <i class="material-icons">edit</i>
-                </a>
-                <a title="Delete category" name="delete item" class="actions-container-action">
-                    <i class="material-icons">delete_outline</i>
-                </a>
-            </div>
-        </article>
-
-        <article class="box-shared box-shared-responsive">
-            <div class="box-shared-texts">
-                <p>Category</p>
-                <span>Bakery</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Created</p>
-                <span>14 de maio de 2020, 10:20</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
-            </div>
-            <hr>
-            <div class="actions-container text-center">
-                <a title="View category" href="categories/view" name="see more" class="actions-container-action">
-                    <i class="material-icons">info_outline</i>
-                </a>
-                <a title="Edit category" name="edit item" class="actions-container-action">
-                    <i class="material-icons">edit</i>
-                </a>
-                <a title="Delete category" name="delete item" class="actions-container-action">
-                    <i class="material-icons">delete_outline</i>
-                </a>
-            </div>
-        </article>
-
-        <article class="box-shared box-shared-responsive">
-            <div class="box-shared-texts">
-                <p>Category</p>
-                <span>Bakery</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Created</p>
-                <span>14 de maio de 2020, 10:20</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
-            </div>
-            <hr>
-            <div class="actions-container text-center">
-                <a title="View category" href="categories/view" name="see more" class="actions-container-action">
-                    <i class="material-icons">info_outline</i>
-                </a>
-                <a title="Edit category" name="edit item" class="actions-container-action">
-                    <i class="material-icons">edit</i>
-                </a>
-                <a title="Delete category" name="delete item" class="actions-container-action">
-                    <i class="material-icons">delete_outline</i>
-                </a>
-            </div>
-        </article>
-
-        <article class="box-shared box-shared-responsive">
-            <div class="box-shared-texts">
-                <p>Category</p>
-                <span>Bakery</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Created</p>
-                <span>14 de maio de 2020, 10:20</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
-            </div>
-            <hr>
-            <div class="actions-container text-center">
-                <a title="View category" href="categories/view" name="see more" class="actions-container-action">
-                    <i class="material-icons">info_outline</i>
-                </a>
-                <a title="Edit category" name="edit item" class="actions-container-action">
-                    <i class="material-icons">edit</i>
-                </a>
-                <a title="Delete category" name="delete item" class="actions-container-action">
-                    <i class="material-icons">delete_outline</i>
-                </a>
-            </div>
-        </article>
-
-        <article class="box-shared box-shared-responsive">
-            <div class="box-shared-texts">
-                <p>Category</p>
-                <span>Bakery</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Created</p>
-                <span>14 de maio de 2020, 10:20</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
-            </div>
-            <hr>
-            <div class="actions-container text-center">
-                <a title="View category" href="categories/view" name="see more" class="actions-container-action">
-                    <i class="material-icons">info_outline</i>
-                </a>
-                <a title="Edit category" name="edit item" class="actions-container-action">
-                    <i class="material-icons">edit</i>
-                </a>
-                <a title="Delete category" name="delete item" class="actions-container-action">
-                    <i class="material-icons">delete_outline</i>
-                </a>
-            </div>
-        </article>
     </div>
 
     <div class="pagination-container text-center">
-        <button > < </button>
+        <button> < </button>
         <span>Page 1 of 280 </span>
         <button> > </button>
     </div>

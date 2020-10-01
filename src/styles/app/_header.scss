@@ -31,11 +31,12 @@
 
 .menu-container {
     position: absolute;
-    height: 100vh;
     background-color: $secondary-full;
     padding: 0 1.5em;
     @include border-radius(0 15px 15px 0);
     z-index: 1;
+    padding-bottom: 3em;
+    min-height: 100vh;
 
     .menu-header {
         border-bottom: 1px solid $white-font-color;

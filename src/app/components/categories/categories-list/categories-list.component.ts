@@ -6,18 +6,18 @@ import { ApiService } from '../../../services/api/api.service';
   templateUrl: './categories-list.component.html'
 })
 export class CategoriesListComponent implements OnInit {
-  categories;
+  categories = [];
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-  // this.showCategories();
+    this.showCategories();
   }
 
   showCategories(): void {
-    this.apiService.getCategories().subscribe((data) => {
-      console.log(data);
-      // assign the value to categories
+    this.apiService.getCategories().subscribe((response) => {
+      console.log(response.data);
+      this.categories = response.data;
     });
   }
 }

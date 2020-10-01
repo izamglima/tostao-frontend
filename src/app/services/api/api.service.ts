@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  API_ENDPOINT = 'http://142.93.13.202/api';
+  API_ENDPOINT = 'http://localhost:3000/api';
 
   constructor(private httpClient: HttpClient) { }
 
