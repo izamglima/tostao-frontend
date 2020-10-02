@@ -27,6 +27,9 @@ import { CategoryViewComponent } from './components/categories/category-view/cat
 import { MarketplacesListComponent } from './components/marketplaces/marketplaces-list/marketplaces-list.component';
 import { MarketplaceNewComponent } from './components/marketplaces/marketplace-new/marketplace-new.component';
 import { MarketplaceViewComponent } from './components/marketplaces/marketplace-view/marketplace-view.component';
+import { CurrenciesListComponent } from './components/currencies/currencies-list/currencies-list/currencies-list.component';
+import { CurrencyNewComponent } from './components/currencies/currency-new/currency-new/currency-new.component';
+import { CurrencyViewComponent } from './components/currencies/currency-view/currency-view/currency-view.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { MarketplaceViewComponent } from './components/marketplaces/marketplace-
     CategoryNewComponent,
     CategoryViewComponent,
     MarketplaceNewComponent,
-    MarketplaceViewComponent
+    MarketplaceViewComponent,
+    CurrenciesListComponent,
+    CurrencyNewComponent,
+    CurrencyViewComponent
   ],
   imports: [
     BrowserModule,
