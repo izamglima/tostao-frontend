@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { ChartsService } from './services/charts.service';
+import { ApiInterceptorService } from './services/api/api-interceptor.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -63,7 +64,7 @@ import { CurrencyViewComponent } from './components/currencies/currency-view/cur
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ChartsService],
+  providers: [ChartsService, { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptorService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,12 +16,12 @@
     @include push-auto;
     margin-bottom: 2em;
     grid-column: 1/9;
-    
+
     span {
         display: block;
         color: $primary;
         font-size: 28vw;
-        margin-top: 20px; 
+        margin-top: 20px;
     }
 }
 
@@ -85,7 +85,7 @@ footer {
     .section {
         canvas {
             max-width: 70%;
-            @include push-auto;    
+            @include push-auto;
         }
     }
 }
