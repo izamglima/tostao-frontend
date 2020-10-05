@@ -3,7 +3,6 @@ import { ApiService } from './api.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('ApiService', () => {
-  let injector: TestBed;
   let service: ApiService;
   let httpMock: HttpTestingController;
 
@@ -36,7 +35,7 @@ describe('ApiService', () => {
     });
 
     const request = httpMock.expectOne(`${service.API_ENDPOINT}/categories`);
-    expect(request.request.method).toBe("GET");
+    expect(request.request.method).toBe('GET');
     request.flush(dummyCategories);
   });
 });

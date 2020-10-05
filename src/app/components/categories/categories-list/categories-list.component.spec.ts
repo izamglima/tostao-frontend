@@ -32,12 +32,10 @@ describe('CategoriesListComponent', () => {
   });
 
 
-  xit('On init categories should be loaded', fakeAsync(() => {
-    spyOn(service, 'getCategories').and.returnValue(of([{name: "Supermercado", id: 123}]).pipe(delay(1)));
+  it('On init categories should be loaded', fakeAsync(() => {
+    spyOn(service, 'getCategories').and.returnValue(of([{name: 'Supermercado', id: 123}]).pipe(delay(1)));
 
     component.ngOnInit();
-    // Trigger ngOnInit()
-    fixture.detectChanges();
 
     expect(service.getCategories).toHaveBeenCalled();
     expect(component.categories).toEqual([]);
@@ -45,7 +43,7 @@ describe('CategoriesListComponent', () => {
     // Simulates the asynchronous passage of time
     tick(1);
 
-    expect(component.categories).toEqual([{name: "Supermercado", id: 123}]);
+    expect(component.categories).toEqual([{name: 'Supermercado', id: 123}]);
   }));
 
   it('it should clean categories filter', () => {
@@ -55,13 +53,13 @@ describe('CategoriesListComponent', () => {
   });
 
   it('it should filter categories', () => {
-    component.categories = [{attributes: {name: "Supermercado", id: 123 }}, {attributes: {name: "Empresa", id: 1234 }}];
+    component.categories = [{attributes: {name: 'Supermercado', id: 123 }}, {attributes: {name: 'Empresa', id: 1234 }}];
     component.filterItem('supermercado');
     expect(component.filteredItems.length).toBe(1);
   });
 
   it('it should filter categories with no value passed', () => {
-    component.categories = [{attributes: {name: "Supermercado", id: 123 }}, {attributes: {name: "Empresa", id: 1234 }}];
+    component.categories = [{attributes: {name: 'Supermercado', id: 123 }}, {attributes: {name: 'Empresa', id: 1234 }}];
     component.filterItem('');
     expect(component.filteredItems.length).toBe(2);
   });

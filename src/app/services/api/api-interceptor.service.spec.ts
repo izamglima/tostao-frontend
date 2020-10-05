@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { ApiInterceptorService } from './api-interceptor.service';
 import { ApiService } from './api.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { HTTP_INTERCEPTORS } from '@angular/common/http'
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 describe('ApiInterceptorService', () => {
   let service: ApiService;

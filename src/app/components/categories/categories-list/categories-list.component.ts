@@ -16,7 +16,7 @@ export class CategoriesListComponent implements OnInit {
     this.showCategories();
   }
 
-  assignCategoriesCopy() {
+  assignCategoriesCopy(): void {
     this.filteredItems = Object.assign([], this.categories);
   }
 
@@ -27,16 +27,16 @@ export class CategoriesListComponent implements OnInit {
     });
   }
 
-  filterItem(value) {
-    if(!value) {
+  filterItem(value): void {
+    if (!value) {
         this.assignCategoriesCopy();
     }
     this.filteredItems = Object.assign([], this.categories).filter(
        item => item.attributes.name.toLowerCase().indexOf(value.toLowerCase()) > -1
-    )
+    );
   }
 
-  cleanFilter() {
+  cleanFilter(): void {
     this.filterCategory = null;
     this.assignCategoriesCopy();
   }
