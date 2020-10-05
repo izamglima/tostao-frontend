@@ -70,6 +70,15 @@ details {
             outline: none;
         }
     }
+    .cancel-filter {
+        position: absolute;
+        right: 25px;
+        top: 35px;
+
+        .material-icons {
+            color: $light-accent-font-color;
+        }
+    }
 }
 
 .pull-right {
