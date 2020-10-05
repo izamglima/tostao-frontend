@@ -22,7 +22,6 @@ export class CategoriesListComponent implements OnInit {
 
   showCategories(): void {
     this.apiService.getCategories().subscribe((response) => {
-      console.log(response.data);
       this.categories = response.data;
       this.assignCategoriesCopy();
     });
