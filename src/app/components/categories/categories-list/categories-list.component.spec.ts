@@ -33,7 +33,7 @@ describe('CategoriesListComponent', () => {
 
 
   it('On init categories should be loaded', fakeAsync(() => {
-    spyOn(service, 'getCategories').and.returnValue(of({data:[{name: 'Supermercado', id: 123}]}).pipe(delay(1)));
+    spyOn(service, 'getCategories').and.returnValue(of({data: [{name: 'Supermercado', id: 123}]}).pipe(delay(1)));
 
     component.ngOnInit();
 
