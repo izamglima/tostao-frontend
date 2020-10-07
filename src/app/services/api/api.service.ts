@@ -12,7 +12,7 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getCategory(id: string): Observable<object> {
+  getCategory(id: string): any {
     return this.httpClient.get(`${this.API_ENDPOINT}/categories/${id}`);
   }
 
