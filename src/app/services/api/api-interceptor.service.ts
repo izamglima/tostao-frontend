@@ -24,7 +24,7 @@ export class ApiInterceptorService implements HttpInterceptor {
     );
   }
 
-  handleError(error: HttpErrorResponse) {
+  handleError(error: HttpErrorResponse): Observable<any> {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
       /*
