@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := help
+.DEFAULT_GOAL := check
 
 BLUE_COLOR := \033[0;34m
 DEFAULT_COLOR := \033[0;39m
@@ -11,11 +11,21 @@ MAJOR := $(shell echo "${VERSION}" | cut -d . -f1)
 MINOR := $(shell echo "${VERSION}" | cut -d . -f2)
 PATCH := $(shell echo "${VERSION}" | cut -d . -f3)
 
+.PHONY: check
+check: lint test e2e ## Runs lint, unit test and end-to-end tests
+
+.PHONY: e2e
+e2e: ## Runs e2e tests.
+	@npx ng e2e --configuration=ci
 
 .PHONY: help
 help: ## Print this help
 	@printf "Tostão ${VERSION}\n"
 	@awk -F ':|##' '/^[^\t].+?:.*?##/ { printf "${BLUE_COLOR}%-30s${DEFAULT_COLOR} %s\n", $$1, $$NF }' $(MAKEFILE_LIST)
+
+.PHONY: lint
+lint: ## Runs lint.
+	@npx ng lint
 
 CHANGELOG_FILE := CHANGELOG.md
 DATE := $(shell date +"%Y-%m-%d")
@@ -60,3 +70,11 @@ release: ## Bumps the version and creates the new tag
 	  printf "\t${DIM_COLOR}Creating release tag${DEFAULT_COLOR}\n" && \
 	  git tag -a -m "" $$NEW_VERSION && \
 	  printf "\n${BLUE_COLOR}If everything's ok, push the changes to updstream!${DEFAULT_COLOR}\n"
+
+.PHONY: start
+start: ## Starts the server
+	@npx ng serve
+
+.PHONY: test
+test: ## Runs unit tests
+	@npx ng test --configuration=ci
