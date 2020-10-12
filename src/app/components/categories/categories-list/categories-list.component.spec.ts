@@ -3,7 +3,8 @@ import { CategoriesListComponent } from './categories-list.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ApiService } from 'src/app/services/api/api.service';
 import { of } from 'rxjs';
-import {delay} from 'rxjs/operators';
+import { delay } from 'rxjs/operators';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('CategoriesListComponent', () => {
   let component: CategoriesListComponent;
@@ -14,7 +15,10 @@ describe('CategoriesListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [CategoriesListComponent],
       imports: [HttpClientTestingModule],
-      providers: [ApiService]
+      providers: [ApiService],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
     .compileComponents();
   }));

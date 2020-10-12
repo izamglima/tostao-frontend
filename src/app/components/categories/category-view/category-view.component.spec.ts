@@ -5,7 +5,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ApiService } from 'src/app/services/api/api.service';
 import { of } from 'rxjs';
 import { Category } from 'src/app/models/category';
-import {delay} from 'rxjs/operators';
+import { delay } from 'rxjs/operators';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('CategoryViewComponent', () => {
   let component: CategoryViewComponent;
@@ -16,7 +17,10 @@ describe('CategoryViewComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ CategoryViewComponent ],
       imports: [HttpClientTestingModule, RouterTestingModule],
-      providers: [ApiService]
+      providers: [ApiService],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
     .compileComponents();
   }));

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -37,8 +37,8 @@ import { CurrencyViewComponent } from './components/currencies/currency-view/cur
     LoginComponent,
     HomeComponent,
     SignComponent,
-    PurchaseHistoryComponent,
     HeaderComponent,
+    PurchaseHistoryComponent,
     PriceHistoryComponent,
     PurchasesListComponent,
     PurchaseNewComponent,
@@ -63,6 +63,9 @@ import { CurrencyViewComponent } from './components/currencies/currency-view/cur
     NoopAnimationsModule,
     FormsModule,
     ReactiveFormsModule
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [ChartsService, { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptorService, multi: true }],
   bootstrap: [AppComponent]
