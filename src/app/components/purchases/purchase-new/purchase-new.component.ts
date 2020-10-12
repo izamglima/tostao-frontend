@@ -56,7 +56,7 @@ export class PurchaseNewComponent implements OnInit {
     this.purchaseItems = this.newPurchase.get('items') as FormArray;
   }
 
-  onSubmit(): void {
-    console.log(this.newPurchase.value);
-  }
+  // onSubmit(): void {
+  //   console.log(this.newPurchase.value);
+  // }
 }

@@ -27,14 +27,8 @@ export class ApiInterceptorService implements HttpInterceptor {
   handleError(error: HttpErrorResponse): Observable<any> {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
-      /*
-        A client-side or network error occurred
-      */
       errorMessage = `Client side error occurred: ${error.error.message}`;
     } else {
-      /*
-        The backend returned an unsuccessful response code.
-      */
       errorMessage = `Backend returned error code: ${error.status}\nMessage: ${error.message}`;
     }
     console.log(errorMessage);
