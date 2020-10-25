@@ -3,9 +3,6 @@ import { ApiInterceptorService } from './api-interceptor.service';
 import { ApiService } from './api.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { HTTP_INTERCEPTORS, HttpErrorResponse } from '@angular/common/http';
-import { observable, Observable } from 'rxjs';
-import { throwError } from 'rxjs/internal/observable/throwError';
-import { of } from 'rxjs/internal/observable/of';
 
 describe('ApiInterceptorService', () => {
   let service: ApiService;
@@ -46,7 +43,7 @@ describe('ApiInterceptorService', () => {
 
   it('should handle error when the request fails - backend', () => {
 
-    let error = new HttpErrorResponse({
+    const error = new HttpErrorResponse({
       error: 401,
       statusText: 'Unauthorized'
     });
@@ -54,7 +51,7 @@ describe('ApiInterceptorService', () => {
     interceptor.handleError(error);
     spyOn(interceptor, 'handleError').and.throwError(error);
 
-    expect(interceptor.handleError).toThrowError()
+    expect(interceptor.handleError).toThrowError();
   });
 
 });

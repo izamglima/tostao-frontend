@@ -46,7 +46,7 @@ describe('CategoryViewComponent', () => {
         name: 'Supermercado'
       },
       relationships: {}
-    }
+    };
     spyOn(service, 'getCategory').and.returnValue(of({data: category}).pipe(delay(1)));
 
     component.ngOnInit();
