@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'purchases/:id', component: PurchaseViewComponent },
   { path: 'categories', component: CategoriesListComponent },
   { path: 'categories/new', component: CategoryNewComponent },
-  { path: 'categories/view', component: CategoryViewComponent },
+  { path: 'categories/:id', component: CategoryViewComponent },
   { path: 'marketplaces', component: MarketplacesListComponent },
   { path: 'marketplaces/view', component: MarketplaceViewComponent },
   { path: 'marketplaces/new', component: MarketplaceNewComponent },

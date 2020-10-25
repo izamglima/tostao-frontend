@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PurchasesListComponent } from './purchases-list.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('PurchasesListComponent', () => {
   let component: PurchasesListComponent;
@@ -8,7 +8,8 @@ describe('PurchasesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PurchasesListComponent ]
+      declarations: [ PurchasesListComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

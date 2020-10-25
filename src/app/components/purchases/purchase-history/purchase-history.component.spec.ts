@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PurchaseHistoryComponent } from './purchase-history.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('PurchaseHistoryComponent', () => {
   let component: PurchaseHistoryComponent;
@@ -8,7 +8,8 @@ describe('PurchaseHistoryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PurchaseHistoryComponent ]
+      declarations: [ PurchaseHistoryComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

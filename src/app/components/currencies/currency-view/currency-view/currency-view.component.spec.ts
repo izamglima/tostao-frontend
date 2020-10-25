@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CurrencyViewComponent } from './currency-view.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('CurrencyViewComponent', () => {
   let component: CurrencyViewComponent;
@@ -8,7 +8,8 @@ describe('CurrencyViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CurrencyViewComponent ]
+      declarations: [ CurrencyViewComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

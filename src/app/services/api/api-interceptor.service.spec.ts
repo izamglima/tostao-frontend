@@ -1,17 +1,20 @@
-import { TestBed } from '@angular/core/testing';
+import { getTestBed, TestBed } from '@angular/core/testing';
 import { ApiInterceptorService } from './api-interceptor.service';
 import { ApiService } from './api.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpErrorResponse } from '@angular/common/http';
 
 describe('ApiInterceptorService', () => {
   let service: ApiService;
   let httpMock: HttpTestingController;
+  let interceptor: ApiInterceptorService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [ApiService,
+      providers: [
+        ApiInterceptorService,
+        ApiService,
         {
           provide: HTTP_INTERCEPTORS,
           useClass: ApiInterceptorService,
@@ -20,6 +23,7 @@ describe('ApiInterceptorService', () => {
       ]
     });
     service = TestBed.inject(ApiService);
+    interceptor = TestBed.inject(ApiInterceptorService);
     httpMock = TestBed.inject(HttpTestingController);
   });
 
@@ -36,4 +40,18 @@ describe('ApiInterceptorService', () => {
 
     expect(httpRequest.request.headers.has('Authorization')).toEqual(true);
   });
+
+  it('should handle error when the request fails - backend', () => {
+
+    const error = new HttpErrorResponse({
+      error: 401,
+      statusText: 'Unauthorized'
+    });
+
+    interceptor.handleError(error);
+    spyOn(interceptor, 'handleError').and.throwError(error);
+
+    expect(interceptor.handleError).toThrowError();
+  });
+
 });

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MarketplaceViewComponent } from './marketplace-view.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 describe('MarketplaceViewComponent', () => {
   let component: MarketplaceViewComponent;
@@ -8,7 +9,8 @@ describe('MarketplaceViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MarketplaceViewComponent ]
+      declarations: [ MarketplaceViewComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

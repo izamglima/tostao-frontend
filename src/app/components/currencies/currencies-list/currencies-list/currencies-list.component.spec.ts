@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CurrenciesListComponent } from './currencies-list.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('CurrenciesListComponent', () => {
   let component: CurrenciesListComponent;
@@ -8,7 +8,10 @@ describe('CurrenciesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CurrenciesListComponent ]
+      declarations: [ CurrenciesListComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
     .compileComponents();
   }));

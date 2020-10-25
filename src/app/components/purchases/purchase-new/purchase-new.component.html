@@ -12,13 +12,13 @@
         <div class="form-text-field form-with-icon margin-right max-size-text-form">
             <i class="material-icons">store</i>
             <label for="marketplace">Marketplace</label>
-            <input type="text" name="marketplace" id="marketplace" formControlName="marketplace" required>   
+            <input type="text" name="marketplace" id="marketplace" formControlName="marketplace" required>
         </div>
 
         <div class="form-text-field form-with-icon side-by-side-text-form margin-right">
             <i class="material-icons">account_balance</i>
             <label for="currency">Currency</label>
-            <input type="text" name="currency" id="currency" formControlName="currency" required>               
+            <input type="text" name="currency" id="currency" formControlName="currency" required>
         </div>
 
         <div class="form-text-field form-with-icon side-by-side-text-form">
@@ -40,41 +40,41 @@
             </button>
             <textarea name="note" id="note" cols="30" rows="5" placeholder="Insert note" formControlName="note"></textarea>
         </div>
-        
+
 
         <div class="section add-purchase-item" formArrayName="items">
             <p>Items:</p>
 
-            <div *ngFor="let purchaseItems of purchaseItemsFormGroup.controls; let i = index;"> 
+            <div *ngFor="let purchaseItems of purchaseItemsFormGroup.controls; let i = index;">
                 <article class="box-shared" [formGroupName]="i">
                     <div class="form-text-field form-with-icon max-size-text-form">
                         <i class="material-icons">shopping_basket</i>
                         <label for="product">Product</label>
-                        <input type="text" name="product" id="product" formControlName="product" required>   
+                        <input type="text" name="product" id="product" formControlName="product" required>
                     </div>
-    
+
                     <div class="form-text-field form-with-icon side-by-side-text-form margin-right">
                         <i class="material-icons">swap_vert</i>
                         <label for="quantity">Quantity</label>
-                        <input type="number" name="quantity" id="quantity" formControlName="quantity" required>   
+                        <input type="number" name="quantity" id="quantity" formControlName="quantity" required>
                     </div>
-    
+
                     <div class="form-text-field form-with-icon side-by-side-text-form">
                         <i class="material-icons">attach_money</i>
                         <label for="price">Price</label>
-                        <input type="number" name="price" id="price" formControlName="price" pattern="[0-9]+([\,|\.][0-9]+)?"  step="0.01" required>   
+                        <input type="number" name="price" id="price" formControlName="price" pattern="[0-9]+([\,|\.][0-9]+)?"  step="0.01" required>
                     </div>
-                
+
                     <div class="form-text-field form-with-icon max-size-text-form">
                         <i class="material-icons">label</i>
                         <label for="category">Category</label>
-                        <input type="text" name="category" id="category" formControlName="category" (change)="setDefaultCategory($event.target.value)">   
+                        <input type="text" name="category" id="category" formControlName="category" (change)="setDefaultCategory($event.target.value)">
                     </div>
-    
+
                     <div class="actions-container text-center">
                         <hr>
                         <button type="button" name="delete item" (click)="removeNewItem(i)">
-                            <i class="material-icons">delete_outline</i>    
+                            <i class="material-icons">delete_outline</i>
                         </button>
                     </div>
                 </article>
@@ -85,7 +85,7 @@
                 <i class="material-icons">add_circle</i>
             </button>
         </div>
-    
+
 
         <div class="total-box">
             <p>Total: </p>
@@ -95,7 +95,8 @@
         <section class="section">
             <div class="text-center buttons-container-add-action">
                 <a href="purchases" class="button button-secondary" name="cancel" value="Cancel">Cancel</a>
-                <button type="submit" class="button button-default" name="save" value="save" [disabled]="newPurchase.invalid" (click)="onSubmit()">Save</button>
+                <!-- <button type="submit" class="button button-default" name="save" value="save" [disabled]="newPurchase.invalid" (click)="onSubmit()">Save</button> -->
+                <button type="submit" class="button button-default" name="save" value="save" [disabled]="newPurchase.invalid">Save</button>
             </div>
         </section>
     </form>

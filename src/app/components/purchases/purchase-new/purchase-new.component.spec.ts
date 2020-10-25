@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder } from '@angular/forms';
 import { PurchaseNewComponent } from './purchase-new.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('NewPurchaseComponent', () => {
   let component: PurchaseNewComponent;
@@ -9,7 +10,8 @@ describe('NewPurchaseComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       providers: [FormBuilder],
-      declarations: [ PurchaseNewComponent ]
+      declarations: [ PurchaseNewComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
