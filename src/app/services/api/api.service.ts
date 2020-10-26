@@ -25,4 +25,8 @@ export class ApiService {
   getMarketplaces(): any {
     return this.httpClient.get(`${this.API_ENDPOINT}/market_places`);
   }
+
+  getProducts(): any {
+    return this.httpClient.get(`${this.API_ENDPOINT}/products`);
+  }
 }

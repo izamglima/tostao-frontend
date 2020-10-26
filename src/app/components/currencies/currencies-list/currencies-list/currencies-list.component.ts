@@ -19,17 +19,17 @@ export class CurrenciesListComponent implements OnInit {
   showCurrencies(): void {
     this.apiService.getCurrencies().subscribe((response: any) => {
       this.currencies = response.data;
-      this.assignCategoriesCopy();
+      this.assignCurrenciesCopy();
     });
   }
 
-  assignCategoriesCopy(): void {
+  assignCurrenciesCopy(): void {
     this.filteredItems = Object.assign([], this.currencies);
   }
 
   filterItem(value): void {
     if (!value) {
-        this.assignCategoriesCopy();
+        this.assignCurrenciesCopy();
     }
     this.filteredItems = Object.assign([], this.currencies).filter(
        item => item.attributes.code.toLowerCase().indexOf(value.toLowerCase()) > -1
@@ -38,6 +38,6 @@ export class CurrenciesListComponent implements OnInit {
 
   cleanFilter(): void {
     this.filterCurrency = null;
-    this.assignCategoriesCopy();
+    this.assignCurrenciesCopy();
   }
 }

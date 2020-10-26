@@ -19,7 +19,7 @@
                 <div class="form-text-field form-with-icon">
                     <i class="material-icons">shopping_basket</i>
                     <label for="product">Product</label>
-                    <input type="text" name="products" id="products">
+                    <input type="text" name="products" id="products" [(ngModel)]="filterProducts" (keyup.enter)="filterItem(filterProducts)">
                 </div>
 
                 <div class="form-text-field form-with-icon">
@@ -35,8 +35,13 @@
                 </div>
 
                 <div class="form-filter-button pull-right">
-                    <button class="button button-circle" name="filter" id="filter">
+                    <button class="button button-circle" name="filter" id="filter" title="Search product"  (click)="filterItem(filterProducts)">
                         <i class="material-icons">search</i>
+                    </button>
+                </div>
+                <div class="cancel-filter" *ngIf="filterProducts">
+                    <button name="cancelFilter" (click)="cleanFilter()" title="Clean filter">
+                        <i class="material-icons">cancel</i>
                     </button>
                 </div>
             </form>
@@ -44,10 +49,10 @@
     </section>
 
     <div class="container-box-shared">
-        <article class="box-shared box-shared-responsive">
+        <article class="box-shared box-shared-responsive"  *ngFor="let product of filteredItems">
             <div class="box-shared-texts">
                 <p>Product</p>
-                <span>Bananen</span>
+                <span>{{product.attributes.name}}</span>
             </div>
             <div class="box-shared-texts">
                 <p>Created</p>
@@ -60,35 +65,7 @@
             <hr>
             <br>
             <div class="actions-container text-center">
-                <a href="products/view" name="see more" class="actions-container-action">
-                    <i class="material-icons">info_outline</i>
-                </a>
-                <a name="edit item" class="actions-container-action">
-                    <i class="material-icons">edit</i>
-                </a>
-                <a name="delete item" class="actions-container-action">
-                    <i class="material-icons">delete_outline</i>
-                </a>
-            </div>
-        </article>
-
-        <article class="box-shared box-shared-responsive">
-            <div class="box-shared-texts">
-                <p>Product</p>
-                <span>Stroopwaffles <3 </span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Created</p>
-                <span>14 de maio de 2020, 10:20</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
-            </div>
-            <hr>
-            <br>
-            <div class="actions-container text-center">
-                <a href="products/view" name="see more" class="actions-container-action">
+                <a href="products/view/{{product.id}}" name="see more" class="actions-container-action">
                     <i class="material-icons">info_outline</i>
                 </a>
                 <a name="edit item" class="actions-container-action">

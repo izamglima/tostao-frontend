@@ -19,18 +19,17 @@ export class MarketplacesListComponent implements OnInit {
   showMarketplaces(): void {
     this.apiService.getMarketplaces().subscribe((response: any) => {
       this.marketplaces = response.data;
-      console.log(this.marketplaces)
-      this.assignCategoriesCopy();
+      this.assignMarketplacesCopy();
     });
   }
 
-  assignCategoriesCopy(): void {
+  assignMarketplacesCopy(): void {
     this.filteredItems = Object.assign([], this.marketplaces);
   }
 
   filterItem(value): void {
     if (!value) {
-        this.assignCategoriesCopy();
+        this.assignMarketplacesCopy();
     }
     this.filteredItems = Object.assign([], this.marketplaces).filter(
        item => item.attributes.name.toLowerCase().indexOf(value.toLowerCase()) > -1
@@ -39,6 +38,6 @@ export class MarketplacesListComponent implements OnInit {
 
   cleanFilter(): void {
     this.filterMarketplace = null;
-    this.assignCategoriesCopy();
+    this.assignMarketplacesCopy();
   }
 }
