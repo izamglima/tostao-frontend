@@ -17,4 +17,8 @@ export class ApiService {
   getCategories(): any {
     return this.httpClient.get(`${this.API_ENDPOINT}/categories`);
   }
+
+  getCurrencies(): any {
+    return this.httpClient.get(`${this.API_ENDPOINT}/currencies`);
+  }
 }

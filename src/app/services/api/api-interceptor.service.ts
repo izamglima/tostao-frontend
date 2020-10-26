@@ -14,7 +14,7 @@ export class ApiInterceptorService implements HttpInterceptor {
 
     httpRequest = httpRequest.clone({
       setHeaders: {
-        Authorization: `Token token="a"`
+        Authorization: `Token token="d5020e77b28a4ad9834e323e3909024c"`
       }
     });
 

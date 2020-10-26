@@ -6,7 +6,7 @@
             <i class="material-icons">attach_money</i>
         </div>
         <h3>Currencies</h3>
-        <a href="/currencies/new" title="Add new currency" name="New category" class="pull-right top-header-link">
+        <a href="/currencies/new" title="Add new currency" name="New currency" class="pull-right top-header-link">
             <i class="material-icons">add_circle</i>
         </a>
     </section>
@@ -14,29 +14,20 @@
     <section class="smaller-section filter-box">
         <details name="Open filter form.">
             <summary>Filter</summary>
-
             <form action="" class="filter-form">
                 <div class="form-text-field form-with-icon">
                     <i class="material-icons">label</i>
                     <label for="currency">Currency</label>
-                    <input type="text" name="currency" id="currency">
+                    <input type="text" name="currency" id="currency" [(ngModel)]="filterCurrency" (keyup.enter)="filterItem(filterCurrency)">
                 </div>
-
-                <div class="form-text-field form-with-icon">
-                    <i class="material-icons">today</i>
-                    <label for="initial-date">From</label>
-                    <input type="date" name="initial-date" id="initial-date">
-                </div>
-
-                <div class="form-text-field form-with-icon">
-                    <i class="material-icons">today</i>
-                    <label for="final-date">To</label>
-                    <input type="date" name="final-date" id="final-date">
-                </div>
-
                 <div class="form-filter-button pull-right">
-                    <button class="button button-circle" name="filter" id="filter">
+                    <button class="button button-circle" name="filter" id="filter" title="Search currencies" (click)="filterItem(filterCurrency)">
                         <i class="material-icons">search</i>
+                    </button>
+                </div>
+                <div class="cancel-filter" *ngIf="filterCurrency">
+                    <button name="cancelFilter" (click)="cleanFilter()" title="Clean filter">
+                        <i class="material-icons">cancel</i>
                     </button>
                 </div>
             </form>
@@ -44,82 +35,20 @@
     </section>
 
     <div class="container-box-shared">
-        <article class="box-shared box-shared-responsive">
+        <article class="box-shared box-shared-responsive" *ngFor="let currency of filteredItems">
             <div class="box-shared-texts">
                 <p>Currency</p>
-                <span>Euro</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Created</p>
-                <span>14/05/2020, 10:20</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
+                <span>{{currency.attributes.code}}</span>
             </div>
             <hr>
             <div class="actions-container text-center">
-                <a title="View category" href="currencies/view" name="see more" class="actions-container-action">
+                <a title="View currency" href="currencies/view/{{currency.id}}" name="see more" class="actions-container-action">
                     <i class="material-icons">info_outline</i>
                 </a>
-                <a title="Edit category" name="edit item" class="actions-container-action">
+                <a title="Edit currency" name="edit item" class="actions-container-action">
                     <i class="material-icons">edit</i>
                 </a>
-                <a title="Delete category" name="delete item" class="actions-container-action">
-                    <i class="material-icons">delete_outline</i>
-                </a>
-            </div>
-        </article>
-
-        <article class="box-shared box-shared-responsive">
-            <div class="box-shared-texts">
-                <p>Currency</p>
-                <span>Real</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Created</p>
-                <span>14 de maio de 2020, 10:20</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
-            </div>
-            <hr>
-            <div class="actions-container text-center">
-                <a title="View category" href="currencies/view" name="see more" class="actions-container-action">
-                    <i class="material-icons">info_outline</i>
-                </a>
-                <a title="Edit category" name="edit item" class="actions-container-action">
-                    <i class="material-icons">edit</i>
-                </a>
-                <a title="Delete category" name="delete item" class="actions-container-action">
-                    <i class="material-icons">delete_outline</i>
-                </a>
-            </div>
-        </article>
-
-        <article class="box-shared box-shared-responsive">
-            <div class="box-shared-texts">
-                <p>Currency</p>
-                <span>Dólar</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Created</p>
-                <span>14 de maio de 2020, 10:20</span>
-            </div>
-            <div class="box-shared-texts">
-                <p>Updated</p>
-                <span>14/05/2020, 10:20</span>
-            </div>
-            <hr>
-            <div class="actions-container text-center">
-                <a title="View category" href="currencies/view" name="see more" class="actions-container-action">
-                    <i class="material-icons">info_outline</i>
-                </a>
-                <a title="Edit category" name="edit item" class="actions-container-action">
-                    <i class="material-icons">edit</i>
-                </a>
-                <a title="Delete category" name="delete item" class="actions-container-action">
+                <a title="Delete currency" name="delete item" class="actions-container-action">
                     <i class="material-icons">delete_outline</i>
                 </a>
             </div>
