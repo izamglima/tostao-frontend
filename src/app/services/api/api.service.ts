@@ -10,23 +10,48 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getCategory(id: string): any {
-    return this.httpClient.get(`${this.API_ENDPOINT}/categories/${id}`);
-  }
-
+  /* * * * * * * * * * *
+        CATEGORIES
+  * * * * * * * * * * */
   getCategories(): any {
     return this.httpClient.get(`${this.API_ENDPOINT}/categories`);
   }
 
+  getCategory(id: string): any {
+    return this.httpClient.get(`${this.API_ENDPOINT}/categories/${id}`);
+  }
+
+
+  /* * * * * * * * * * *
+        CURRENCIES
+  * * * * * * * * * * */
   getCurrencies(): any {
     return this.httpClient.get(`${this.API_ENDPOINT}/currencies`);
   }
 
+
+  /* * * * * * * * * * *
+        MARKETPLACES
+  * * * * * * * * * * */
   getMarketplaces(): any {
     return this.httpClient.get(`${this.API_ENDPOINT}/market_places`);
   }
 
+
+  /* * * * * * * * * * *
+        PRODUCTS
+  * * * * * * * * * * */
   getProducts(): any {
     return this.httpClient.get(`${this.API_ENDPOINT}/products`);
   }
+
+
+  /* * * * * * * * * * *
+        PURCHASES
+  * * * * * * * * * * */
+  getPurchases(): any {
+    return this.httpClient.get(`${this.API_ENDPOINT}/expenses`);
+  }
+
+
 }

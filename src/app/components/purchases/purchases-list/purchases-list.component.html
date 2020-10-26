@@ -56,7 +56,7 @@
     </section>
 
     <div class="container-box-shared">
-        <article class="box-shared box-shared-responsive">
+        <article class="box-shared box-shared-responsive" *ngFor="let purchase of filteredItems">
             <div class="box-shared-texts">
                 <p>Marketplace</p>
                 <span>Supermecado Dalben</span>
@@ -75,7 +75,7 @@
             </div>
             <div class="box-shared-texts">
                 <p>Created</p>
-                <span>14/05/2020, 10:20</span>
+                <span>{{purchase.attributes['created-at'] | date:'dd/MM/yyyy'}}</span>
             </div>
             <div class="box-shared-texts">
                 <p>Total</p>

@@ -19,6 +19,7 @@ export class ProductsListComponent implements OnInit {
   showProducts(): void {
     this.apiService.getProducts().subscribe((response: any) => {
       this.products = response.data;
+      console.log(this.products);
       this.assignProductsCopy();
     });
   }
