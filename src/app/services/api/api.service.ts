@@ -21,4 +21,8 @@ export class ApiService {
   getCurrencies(): any {
     return this.httpClient.get(`${this.API_ENDPOINT}/currencies`);
   }
+
+  getMarketplaces(): any {
+    return this.httpClient.get(`${this.API_ENDPOINT}/market_places`);
+  }
 }

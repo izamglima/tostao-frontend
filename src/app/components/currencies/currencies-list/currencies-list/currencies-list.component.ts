@@ -13,10 +13,10 @@ export class CurrenciesListComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.showCategories();
+    this.showCurrencies();
   }
 
-  showCategories(): void {
+  showCurrencies(): void {
     this.apiService.getCurrencies().subscribe((response: any) => {
       this.currencies = response.data;
       this.assignCategoriesCopy();
@@ -36,10 +36,8 @@ export class CurrenciesListComponent implements OnInit {
     );
   }
 
-
   cleanFilter(): void {
     this.filterCurrency = null;
     this.assignCategoriesCopy();
   }
-
 }
