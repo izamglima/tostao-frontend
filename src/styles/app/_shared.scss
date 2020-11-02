@@ -189,6 +189,9 @@ hr {
         color: $accent-font-color;
         margin-right: 0.5em;
     }
+    .mat-paginator-container {
+        justify-content: center;
+    }
 }
 
 .container-box-shared {
