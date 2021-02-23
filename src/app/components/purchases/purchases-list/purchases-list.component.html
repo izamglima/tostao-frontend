@@ -56,35 +56,35 @@
     </section>
 
     <div class="container-box-shared">
-        <article class="box-shared box-shared-responsive">
+        <article class="box-shared box-shared-responsive" *ngFor="let purchase of filteredItems">
             <div class="box-shared-texts">
                 <p>Marketplace</p>
-                <span>Supermecado Dalben</span>
+                <span>{{purchase.attributes['market-place-id']}}</span>
             </div>
             <div class="box-shared-texts">
                 <p>Recipe</p>
-                <span>65536</span>
+                <span>{{purchase.id}}</span>
             </div>
             <div class="box-shared-texts">
                 <p>Category</p>
-                <span>Supermarkt</span>
+                <span>{{purchase.attributes['category-id']}}</span>
             </div>
             <div class="box-shared-texts">
                 <p>Products</p>
-                <span>Banana, Morango, Leite, Ovos, Bolacha, Alface,  Morango, Leite, Ovos, Bolacha, Alface Morango, Leite, Ovos, Bolacha, Alface Morango, Leite, Ovos, Bolacha, Alface Morango, Leite, Ovos, Bolacha, Alface Morango, Leite, Ovos, Bolacha, Alface</span>
+                <span title="TBD">PRECISA ARRUMAR ESSA PARTE!!</span>
             </div>
             <div class="box-shared-texts">
                 <p>Created</p>
-                <span>14/05/2020, 10:20</span>
+                <span>{{purchase.attributes['created-at'] | date:'dd/MM/yyyy'}}</span>
             </div>
             <div class="box-shared-texts">
                 <p>Total</p>
-                <span>R$: 284,00</span>
+                <span>{{purchase.attributes.value}}</span>
             </div>
             <hr>
             <br>
             <div class="actions-container text-center">
-                <a href="purchases/2734" name="see more" class="actions-container-action">
+                <a href="purchases/{{purchase.id}}" name="see more" class="actions-container-action">
                     <i class="material-icons">info_outline</i>
                 </a>
                 <a name="edit item" class="actions-container-action">
