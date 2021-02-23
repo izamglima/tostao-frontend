@@ -3,7 +3,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { ChartsService } from './services/charts.service';
 import { ApiInterceptorService } from './services/api/api-interceptor.service';
@@ -31,7 +30,6 @@ import { MarketplaceViewComponent } from './components/marketplaces/marketplace-
 import { CurrenciesListComponent } from './components/currencies/currencies-list/currencies-list/currencies-list.component';
 import { CurrencyNewComponent } from './components/currencies/currency-new/currency-new/currency-new.component';
 import { CurrencyViewComponent } from './components/currencies/currency-view/currency-view/currency-view.component';
-import { PaginatorComponent } from './shared/paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -56,8 +54,7 @@ import { PaginatorComponent } from './shared/paginator/paginator.component';
     MarketplaceViewComponent,
     CurrenciesListComponent,
     CurrencyNewComponent,
-    CurrencyViewComponent,
-    PaginatorComponent
+    CurrencyViewComponent
   ],
   imports: [
     BrowserModule,
@@ -65,8 +62,7 @@ import { PaginatorComponent } from './shared/paginator/paginator.component';
     AppRoutingModule,
     NoopAnimationsModule,
     FormsModule,
-    ReactiveFormsModule,
-    MatPaginatorModule
+    ReactiveFormsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
